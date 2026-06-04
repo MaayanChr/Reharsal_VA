@@ -116,6 +116,19 @@
         "source": "url",
         "url": "https://example.com/video.mp4"
       }
+	  ,
+	{
+	  "title": "Audio Demo 1",
+	  "source": "url",
+	  "type": "audio",
+	  "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+	},
+	{
+	  "title": "Audio Demo 2",
+	  "source": "url",
+	  "type": "audio",
+	  "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+	}
     ],
 
     "soprano2": [
