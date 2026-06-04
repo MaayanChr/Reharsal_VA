@@ -1,0 +1,479 @@
+{
+  "libraryTitle": "מוצרט - רקוויאם 626 KV",
+  "defaultGroup": "bass",
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+  "groups2": [
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    }
+  ],
+  "segments": {
+    "soprano": [
+      {
+        "title": "I - Introitus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fsVcqtXYOzU",
+        "start": 0
+      },
+      {
+        "title": "II - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "xER4T8NB8EY",
+        "start": 0
+      },
+      {
+        "title": "III - 1 - Dies irae",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "AR1iRvwGrYE",
+        "start": 0
+      },
+      {
+        "title": "III - 2 - Tuba mirum (soli 1:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "AR1iRvwGrYE",
+        "start": 118
+      },
+      {
+        "title": "III - 3 - Rex tremende (5:14)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "AR1iRvwGrYE",
+        "start": 314
+      },
+      {
+        "title": "III - 4 - Recordare (soli 7:05)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "AR1iRvwGrYE",
+        "start": 0
+      },
+      {
+        "title": "III - 5 - Confutatis (11:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "AR1iRvwGrYE",
+        "start": 718
+      },
+      {
+        "title": "III - 6 - Lacrimosa (14:12)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "AR1iRvwGrYE",
+        "start": 852
+      },
+      {
+        "title": "IV - 1 - Domine Jesu",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "nVRE-W2fK_c",
+        "start": 0
+      },
+      {
+        "title": "IV - 2 - Hosteas (3:11)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "nVRE-W2fK_c",
+        "start": 191
+      },
+      {
+        "title": "V - Santcus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qoOT9Aq0Tp4",
+        "start": 0
+      },
+      {
+        "title": "VI - 1 - Benedictus (soli 1:47)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qoOT9Aq0Tp4",
+        "start": 107
+      },
+      {
+        "title": "VI - 2 - Osana (choire 6:41)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qoOT9Aq0Tp4",
+        "start": 401
+      },
+      {
+        "title": "VII - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "oL0ArUzWepI",
+        "start": 0
+      },
+      {
+        "title": "VIII - Lux aeterna",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "aq5xkT2x44U",
+        "start": 0
+      }
+    ],
+    "alto": [
+      {
+        "title": "I - Introitus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "D9_umh6CCs0",
+        "start": 0
+      },
+      {
+        "title": "II - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gTshVjqeE68",
+        "start": 0
+      },
+      {
+        "title": "III - 1 - Dies irae",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sn9wbbeziZU",
+        "start": 0
+      },
+      {
+        "title": "III - 2 - Tuba mirum (soli 1:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sn9wbbeziZU",
+        "start": 118
+      },
+      {
+        "title": "III - 3 - Rex tremende (5:14)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sn9wbbeziZU",
+        "start": 314
+      },
+      {
+        "title": "III - 4 - Recordare (soli 7:05)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sn9wbbeziZU",
+        "start": 425
+      },
+      {
+        "title": "III - 5 - Confutatis (11:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sn9wbbeziZU",
+        "start": 718
+      },
+      {
+        "title": "III - 6 - Lacrimosa (14:12)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sn9wbbeziZU",
+        "start": 852
+      },
+      {
+        "title": "IV - 1 - Domine Jesu",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HY29Gdr6UUE",
+        "start": 0
+      },
+      {
+        "title": "IV - 2 - Hosteas (3:11)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HY29Gdr6UUE",
+        "start": 191
+      },
+      {
+        "title": "V - Santcus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YMUvfZ1TP1Y",
+        "start": 0
+      },
+      {
+        "title": "VI - 1 - Benedictus (soli 1:45)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YMUvfZ1TP1Y",
+        "start": 105
+      },
+      {
+        "title": "VI - 2 - Osana (choire 6:41)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YMUvfZ1TP1Y",
+        "start": 401
+      },
+      {
+        "title": "VII - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QwvSEc2HuHQ",
+        "start": 0
+      },
+      {
+        "title": "VIII - Lux aeterna",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "R4-utUfInDU",
+        "start": 0
+      }
+    ],
+    "tenor": [
+      {
+        "title": "I - Introitus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "8lf2bhv8zkI",
+        "start": 0
+      },
+      {
+        "title": "II - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "C06AeeU624s",
+        "start": 0
+      },
+      {
+        "title": "III - 1 - Dies irae",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "F6a5RVGo1_0",
+        "start": 0
+      },
+      {
+        "title": "III - 2 - Tuba mirum (soli 1:57)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "F6a5RVGo1_0",
+        "start": 117
+      },
+      {
+        "title": "III - 3 - Rex tremende (5:14)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "F6a5RVGo1_0",
+        "start": 314
+      },
+      {
+        "title": "III - 4 - Recordare (soli 7:05)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "F6a5RVGo1_0",
+        "start": 425
+      },
+      {
+        "title": "III - 5 - Confutatis (11:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "F6a5RVGo1_0",
+        "start": 718
+      },
+      {
+        "title": "III - 6 - Lacrimosa (14:12)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "F6a5RVGo1_0",
+        "start": 852
+      },
+      {
+        "title": "IV - 1 - Domine Jesu",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5Nmfif1oTFE",
+        "start": 0
+      },
+      {
+        "title": "IV - 2 - Hosteas (3:11)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5Nmfif1oTFE",
+        "start": 191
+      },
+      {
+        "title": "V - Santcus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "cMRIl_Ss3w4",
+        "start": 0
+      },
+      {
+        "title": "VI - 1 - Benedictus (soli 1:45)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "cMRIl_Ss3w4",
+        "start": 105
+      },
+      {
+        "title": "VI - 2 - Osana (choire 6:41)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "cMRIl_Ss3w4",
+        "start": 401
+      },
+      {
+        "title": "VII - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "0DVeDLQtLfU",
+        "start": 0
+      },
+      {
+        "title": "VIII - Lux aeterna",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "sB8MCtscpZE",
+        "start": 0
+      }
+    ],
+    "bass": [
+      {
+        "title": "I - Introitus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "N2g1TWvRh6I",
+        "start": 0
+      },
+      {
+        "title": "II - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "lP3ZNsmwCXI",
+        "start": 0
+      },
+      {
+        "title": "III - 1 - Dies irae",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Map-n3PrbCw",
+        "start": 0
+      },
+      {
+        "title": "III - 2 - Tuba mirum (soli 1:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Map-n3PrbCw",
+        "start": 118
+      },
+      {
+        "title": "III - 3 - Rex tremende (5:14)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Map-n3PrbCw",
+        "start": 314
+      },
+      {
+        "title": "III - 4 - Recordare (soli 7:05)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Map-n3PrbCw",
+        "start": 425
+      },
+      {
+        "title": "III - 5 - Confutatis (11:58)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Map-n3PrbCw",
+        "start": 718
+      },
+      {
+        "title": "III - 6 - Lacrimosa (14:12)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Map-n3PrbCw",
+        "start": 852
+      },
+      {
+        "title": "IV - 1 - Domine Jesu",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "89tpE5IWur0",
+        "start": 0
+      },
+      {
+        "title": "IV - 2 - Hosteas (3:11)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "89tpE5IWur0",
+        "start": 191
+      },
+      {
+        "title": "V - Santcus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "eiFTz41a4RY",
+        "start": 0
+      },
+      {
+        "title": "VI - 1 - Benedictus (soli 1:45)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "eiFTz41a4RY",
+        "start": 105
+      },
+      {
+        "title": "VI - 2 - Osana (choire 6:41)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "eiFTz41a4RY",
+        "start": 401
+      },
+      {
+        "title": "VII - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QJ74c_YgaoM",
+        "start": 0
+      },
+      {
+        "title": "VIII - Lux aeterna",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ISEUuCTVEpE",
+        "start": 0
+      }
+    ],
+    "all": [],
+    "soprano2": [],
+    "alto2": [],
+    "tenor2": [],
+    "bass2": []
+  }
+}

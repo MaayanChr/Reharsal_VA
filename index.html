@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ספרית היצירות</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- אזור הנגן -->
+
+    <section class="video-panel">
+
+        <h2 id="libraryTitle">
+            ספרית היצירות
+        </h2>
+
+        <!-- מוצג רק בנייד -->
+
+        <button id="backToMenuBtn"
+                class="mobile-only"
+                onclick="showMobileMenu()">
+            חזרה לבחירת קטעים
+        </button>
+
+        <div class="video-wrapper"
+             id="videoWrapper">
+
+            <div id="player"></div>
+
+        </div>
+        <div class="player-toolbar">
+
+            <div id="currentTitle">
+                בחר קול ולאחר מכן בחר קטע
+            </div>
+
+            <div id="jumpToTimeContainer" class="jump-to-time">
+                <input
+                    type="text"
+                    id="jumpToTimeInput"
+                    placeholder="1:05"
+                    title="דקה:שניה או שעה:דקה:שניה">
+
+                <button id="jumpToTimeBtn">
+                    דלג
+                </button>
+            </div>
+
+            <div id="skipButtons"
+                 class="skip-buttons"
+                 aria-label="כפתורי דילוג בנגן">
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- אזור הכפתורים -->
+
+    <section class="buttons-panel">
+
+        <div class="groups-title-row">
+		  <h3>קולות</h3>
+
+		  <button id="openFullBtn" type="button">
+			פתח במסך מלא
+		  </button>
+		</div>
+
+        <div id="groupButtons"
+             class="group-buttons">
+        </div>
+
+        <div id="groupButtons2"
+             class="group-buttons second-row">
+        </div>
+
+        <h3>קטעים</h3>
+
+        <div id="segmentButtons">
+        </div>
+
+    </section>
+
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

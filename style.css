@@ -1,0 +1,376 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background: #f7f7f7;
+  direction: rtl;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+}
+
+.video-panel,
+.buttons-panel {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+#player,
+#htmlVideo {
+  width: 100%;
+  height: 100%;
+}
+
+#currentTitle {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.group-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.second-row {
+  margin-top: -6px;
+  margin-bottom: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f0f0f0;
+}
+
+.group-buttons button {
+  padding: 8px 4px;
+  font-size: 14px;
+}
+
+.group-buttons button.active {
+  background: #dbeafe;
+  border-color: #2563eb;
+  font-weight: bold;
+}
+
+.segment-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 11px;
+  font-size: 15px;
+  text-align: right;
+}
+
+button:hover:not(:disabled) {
+  background: #eef3ff;
+}
+
+.error {
+  color: #b00020;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 8px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .video-panel,
+  .buttons-panel {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .group-buttons {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+
+  .group-buttons button {
+    font-size: 13px;
+    padding: 8px 3px;
+  }
+
+  .segment-button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+#currentTitle {
+  unicode-bidi: plaintext;
+}
+.mobile-only {
+  display: none;
+}
+
+/* רק בנייד */
+@media (max-width: 800px) {
+  body.mobile-menu-mode .video-panel {
+    display: none;
+  }
+
+  body.mobile-player-mode .buttons-panel {
+    display: none;
+  }
+
+  body.mobile-player-mode .video-panel {
+    display: block;
+  }
+
+  #backToMenuBtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 800px) {
+  html,
+  body {
+    height: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100vh;
+    max-height: 100vh;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+
+  body.mobile-menu-mode .buttons-panel {
+    display: block;
+    height: calc(100vh - 12px);
+    max-height: calc(100vh - 12px);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  body.mobile-menu-mode .video-panel {
+    display: none;
+  }
+
+  body.mobile-player-mode .video-panel {
+    display: block;
+    height: calc(100vh - 12px);
+    max-height: calc(100vh - 12px);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  body.mobile-player-mode .buttons-panel {
+    display: none;
+  }
+
+  .buttons-panel h3 {
+    margin: 6px 0;
+    font-size: 15px;
+  }
+
+  .group-buttons {
+    gap: 3px;
+    margin-bottom: 8px;
+  }
+
+  .group-buttons button {
+    font-size: 12px;
+    padding: 6px 2px;
+    border-radius: 6px;
+  }
+
+  .segment-button {
+    font-size: 13px;
+    padding: 8px 7px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+  }
+}
+.groups-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#openFullBtn {
+  padding: 6px 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.groups-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#openFullBtn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #openFullBtn {
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+.skip-buttons {
+  display: flex;
+  gap: 4px;
+  direction: ltr;
+  flex-shrink: 0;
+}
+
+.skip-row {
+  display: contents;
+}
+
+.skip-buttons button {
+  min-width: 31px;
+  padding: 3px 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  border-radius: 6px;
+}
+
+.player-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  direction: ltr;
+}
+
+.player-toolbar #currentTitle {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-weight: bold;
+  text-align: left !important;
+  direction: ltr !important;
+  unicode-bidi: plaintext;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jump-to-time {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+#jumpToTimeInput {
+  width: 52px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 12px;
+  padding: 3px 4px;
+}
+
+#jumpToTimeBtn {
+  padding: 3px 7px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+  #jumpToTimeContainer {
+    display: none;
+  }
+
+  .player-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "title positive"
+      "negative negative";
+    align-items: center;
+    gap: 4px;
+    direction: ltr;
+  }
+
+  .player-toolbar #currentTitle {
+    grid-area: title;
+    justify-self: start;
+    width: 100%;
+    text-align: left !important;
+    direction: ltr !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+
+  .skip-buttons {
+    display: contents;
+  }
+
+  .skip-row {
+    display: flex;
+    gap: 4px;
+    direction: ltr;
+  }
+
+  .skip-positive {
+    grid-area: positive;
+    justify-content: flex-end;
+  }
+
+  .skip-negative {
+    grid-area: negative;
+    justify-content: flex-end;
+  }
+
+  .skip-buttons button {
+    min-width: 28px;
+    padding: 2px 3px;
+    font-size: 10px;
+  }
+}
+.segment-button.active {
+  background: #dbeafe;
+  border-color: #2563eb;
+  font-weight: bold;
+}

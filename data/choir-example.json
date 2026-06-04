@@ -1,0 +1,143 @@
+{
+  "libraryTitle": "חזרת מקהלה - דוגמה",
+  "defaultGroup": "all",
+
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+
+  "groups2": [
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    }
+  ],
+
+  "segments": {
+    "soprano": [
+      {
+        "title": "סופרן - פתיחה",
+        "source": "youtube",
+        "videoId": "dQw4w9WgXcQ",
+        "start": 0
+      },
+      {
+        "title": "סופרן - קפיצה ל־01:15",
+        "source": "youtube",
+        "videoId": "dQw4w9WgXcQ",
+        "start": 75
+      }
+    ],
+
+    "alto": [
+      {
+        "title": "אלט - פתיחה",
+        "source": "youtube",
+        "videoId": "M7lc1UVf-VE",
+        "start": 0
+      },
+      {
+        "title": "אלט - קפיצה ל־02:30",
+        "source": "youtube",
+        "videoId": "M7lc1UVf-VE",
+        "start": 150
+      }
+    ],
+
+    "tenor": [
+      {
+        "title": "טנור - התחלה",
+        "source": "youtube",
+        "videoId": "dQw4w9WgXcQ",
+        "start": 30
+      }
+    ],
+
+    "bass": [
+      {
+        "title": "בס - התחלה",
+        "source": "youtube",
+        "videoId": "M7lc1UVf-VE",
+        "start": 45
+      }
+    ],
+
+    "all": [
+      {
+        "title": "כולם - פתיחה",
+        "source": "youtube",
+        "videoId": "dQw4w9WgXcQ",
+        "start": 0
+      },
+      {
+        "title": "כולם - חזרה כללית",
+        "source": "youtube",
+        "videoId": "M7lc1UVf-VE",
+        "start": 60
+      },
+      {
+        "title": "דוגמה לקובץ Google Drive",
+        "source": "gdrive",
+        "fileId": "PUT_GOOGLE_DRIVE_FILE_ID_HERE"
+      },
+      {
+        "title": "דוגמה לקובץ MP4 מכתובת ישירה",
+        "source": "url",
+        "url": "https://example.com/video.mp4"
+      }
+    ],
+
+    "soprano2": [
+      {
+        "title": "סופרן 2 - קטע לדוגמה",
+        "source": "youtube",
+        "videoId": "dQw4w9WgXcQ",
+        "start": 120
+      }
+    ],
+
+    "alto2": [
+      {
+        "title": "אלט 2 - קטע לדוגמה",
+        "source": "youtube",
+        "videoId": "M7lc1UVf-VE",
+        "start": 90
+      }
+    ],
+
+    "tenor2": [],
+
+    "bass2": []
+  }
+}

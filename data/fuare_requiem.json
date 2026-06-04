@@ -1,0 +1,314 @@
+{
+  "libraryTitle": "גבריאל פורה - רקוויאם אופוס 48",
+  "defaultGroup": "alto",
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+  "groups2": [
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    }
+  ],
+  "segments": {
+    "soprano": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "JGWdf0gIOSI",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "i9sXTLo25Zk",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "ejpQVxbI5bo",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "cnppiV72n_0",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "EKKHyGA9lCM",
+        "start": 0
+      },
+      {
+        "title": "7 - In Paradisum",
+        "source": "youtube",
+        "videoId": "lGd5NsTcrVs",
+        "start": 0
+      }
+    ],
+    "alto": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "yICBdPWD6Vo",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "vxuiAM32NJ0",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "MyYt9Aw9U_Q",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "BrizGgHqSAw",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "ZdE_Gt-js2A",
+        "start": 0
+      },
+      {
+        "title": "7 - In Paradisum",
+        "source": "youtube",
+        "videoId": "Qi9f-hMfAis",
+        "start": 0
+      }
+    ],
+    "tenor": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "SZJg9sd5Jd8",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "qbxl87URISM",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "hPBx7fnrLyQ",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "1dj5MT9SZdY",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "fMMX2cJISI0",
+        "start": 0
+      },
+      {
+        "title": "7 - In Paradisum",
+        "source": "youtube",
+        "videoId": "RH0xxdQ7HXY",
+        "start": 0
+      }
+    ],
+    "bass": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "XVTJsz3rXXU",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "ZlQzZQwm8_o",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "w5bKOUApKhs",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "EvAHidjwb2M",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "05s_r8GN_wg",
+        "start": 0
+      },
+      {
+        "title": "7 - In Paradisum",
+        "source": "youtube",
+        "videoId": "QrQaVXDxIEY",
+        "start": 0
+      }
+    ],
+    "all": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "HAQ58qeFhxQ",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "DxltYeXCU0A",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "s_cVTi-rZcQ",
+        "start": 0
+      },
+      {
+        "title": "4 - Pie Jesu",
+        "source": "youtube",
+        "videoId": "DUBtNl2JB1Y",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "q1FKoPO-S2w",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "D0ynrd_4ZDE",
+        "start": 0
+      }
+    ],
+    "soprano2": [],
+    "alto2": [],
+    "tenor2": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "nl3vqUgIUnU",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "CFDuC4mI7rk",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "R88fK08ErDo",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "DP0IUKoEQ_g",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "7R-l5D_RhQE",
+        "start": 0
+      },
+      {
+        "title": "7 - In Paradisum",
+        "source": "youtube",
+        "videoId": "ZxHFmwAPwzE",
+        "start": 0
+      }
+    ],
+    "bass2": [
+      {
+        "title": "1 - Introit et Kyrie",
+        "source": "youtube",
+        "videoId": "ei_qiXI54ik",
+        "start": 0
+      },
+      {
+        "title": "2 - Offertoire",
+        "source": "youtube",
+        "videoId": "IPePALnq3RY",
+        "start": 0
+      },
+      {
+        "title": "3 - Sanctus",
+        "source": "youtube",
+        "videoId": "aKnzePSN-dA",
+        "start": 0
+      },
+      {
+        "title": "5 - Agnus Dei",
+        "source": "youtube",
+        "videoId": "shFPs7Klb0M",
+        "start": 0
+      },
+      {
+        "title": "6 - Libera Me",
+        "source": "youtube",
+        "videoId": "5BsKvbqL3d8",
+        "start": 0
+      },
+      {
+        "title": "7 - In Paradisum",
+        "source": "youtube",
+        "videoId": "7uviq0ggomk",
+        "start": 0
+      }
+    ]
+  }
+}
