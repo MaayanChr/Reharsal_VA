@@ -10,9 +10,6 @@ let advancingAfterEnded = false;
 let audioVisualizerAnimationId = null;
 let audioWaveformData = null;
 let audioVisualizerMedia = null;
-let audioContext = null;
-let audioAnalyser = null;
-let audioStreamSource = null;
 
 function getDataFileName() {
   const params = new URLSearchParams(window.location.search);
@@ -268,7 +265,6 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
   const wrapper = document.getElementById('videoWrapper');
 
   stopCurrentVideo();
-  destroyAudioVisualizer();
   wrapper.innerHTML = '';
 
   wrapper.classList.toggle('audio-wrapper', mediaType === 'audio');
@@ -280,12 +276,6 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
 
   if (mediaType === 'audio') {
     media.className = 'audio-player';
-
-    const visualizer = document.createElement('canvas');
-    visualizer.id = 'audioVisualizer';
-    visualizer.className = 'audio-visualizer';
-    visualizer.setAttribute('aria-label', 'תצוגת עוצמת שמע');
-    wrapper.appendChild(visualizer);
   }
 
   if (autoplay) {
@@ -305,11 +295,8 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
 
   wrapper.appendChild(media);
   currentMode = 'html';
-
-  if (mediaType === 'audio') {
-    initAudioVisualizer(media, mediaUrl);
-  }
 }
+
 
 function loadHtmlVideo(videoUrl, autoplay) {
   loadHtmlMedia(videoUrl, autoplay, 'video', 0);
@@ -319,7 +306,6 @@ function ensureYouTubeContainer() {
   const wrapper = document.getElementById('videoWrapper');
 
   if (currentMode !== 'youtube') {
-    destroyAudioVisualizer();
     wrapper.classList.remove('audio-wrapper');
     wrapper.innerHTML = '<div id="player"></div>';
     player = null;
@@ -328,7 +314,6 @@ function ensureYouTubeContainer() {
 
 function clearPlayer() {
   stopCurrentVideo();
-  destroyAudioVisualizer();
 
   const wrapper = document.getElementById('videoWrapper');
   wrapper.classList.remove('audio-wrapper');
@@ -807,298 +792,6 @@ function jumpToExactTime() {
   }
 
   updateSkipButtons();
-}
-
-function destroyAudioVisualizer() {
-  if (audioVisualizerAnimationId) {
-    cancelAnimationFrame(audioVisualizerAnimationId);
-    audioVisualizerAnimationId = null;
-  }
-
-  if (audioStreamSource) {
-    try {
-      audioStreamSource.disconnect();
-    } catch (error) {
-      // ignore
-    }
-    audioStreamSource = null;
-  }
-
-  if (audioAnalyser) {
-    try {
-      audioAnalyser.disconnect();
-    } catch (error) {
-      // ignore
-    }
-    audioAnalyser = null;
-  }
-
-  audioWaveformData = null;
-  audioVisualizerMedia = null;
-}
-
-function initAudioVisualizer(media, mediaUrl) {
-  const canvas = document.getElementById('audioVisualizer');
-
-  if (!canvas) {
-    return;
-  }
-
-  audioVisualizerMedia = media;
-  audioWaveformData = createFallbackWaveformData(160);
-  drawAudioVisualizerFrame(canvas, media);
-  startAudioVisualizerLoop(canvas, media);
-
-  setupLiveAudioAnalyser(media);
-
-  loadDecodedWaveform(mediaUrl)
-    .then(data => {
-      if (audioVisualizerMedia === media && data && data.length) {
-        audioWaveformData = data;
-      }
-    })
-    .catch(() => {
-      // אם ניתוח קובץ חיצוני נחסם, נשארת תצוגת ברירת מחדל.
-      // השמע עצמו ממשיך להתנגן רגיל דרך תגית audio.
-    });
-}
-
-function setupLiveAudioAnalyser(media) {
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  const captureStream = media.captureStream || media.mozCaptureStream;
-
-  if (!AudioContextClass || !captureStream) {
-    return;
-  }
-
-  media.addEventListener('play', () => {
-    if (audioVisualizerMedia !== media || audioAnalyser) {
-      return;
-    }
-
-    try {
-      if (!audioContext) {
-        audioContext = new AudioContextClass();
-      }
-
-      if (audioContext.state === 'suspended') {
-        audioContext.resume().catch(() => {});
-      }
-
-      const stream = captureStream.call(media);
-      audioAnalyser = audioContext.createAnalyser();
-      audioAnalyser.fftSize = 512;
-      audioAnalyser.smoothingTimeConstant = 0.72;
-
-      audioStreamSource = audioContext.createMediaStreamSource(stream);
-      audioStreamSource.connect(audioAnalyser);
-
-      // לא מחברים ל-destination כדי לא להתערב בשרשרת ההשמעה של תגית audio.
-    } catch (error) {
-      audioAnalyser = null;
-      audioStreamSource = null;
-    }
-  });
-}
-
-function startAudioVisualizerLoop(canvas, media) {
-  function draw() {
-    if (audioVisualizerMedia !== media) {
-      return;
-    }
-
-    drawAudioVisualizerFrame(canvas, media);
-    audioVisualizerAnimationId = requestAnimationFrame(draw);
-  }
-
-  draw();
-}
-
-async function loadDecodedWaveform(mediaUrl) {
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-
-  if (!AudioContextClass || !mediaUrl) {
-    return null;
-  }
-
-  const response = await fetch(mediaUrl, { mode: 'cors' });
-
-  if (!response.ok) {
-    return null;
-  }
-
-  const arrayBuffer = await response.arrayBuffer();
-  const context = new AudioContextClass();
-
-  try {
-    const audioBuffer = await context.decodeAudioData(arrayBuffer);
-    return extractWaveformData(audioBuffer, 160);
-  } finally {
-    if (typeof context.close === 'function') {
-      context.close().catch(() => {});
-    }
-  }
-}
-
-function extractWaveformData(audioBuffer, bars) {
-  const channelData = audioBuffer.getChannelData(0);
-  const samplesPerBar = Math.max(1, Math.floor(channelData.length / bars));
-  const result = [];
-
-  for (let i = 0; i < bars; i++) {
-    const start = i * samplesPerBar;
-    const end = Math.min(channelData.length, start + samplesPerBar);
-    let peak = 0;
-    let sum = 0;
-
-    for (let j = start; j < end; j++) {
-      const value = Math.abs(channelData[j]);
-      if (value > peak) {
-        peak = value;
-      }
-      sum += value * value;
-    }
-
-    const rms = Math.sqrt(sum / Math.max(1, end - start));
-    result.push(Math.min(1, peak * 0.75 + rms * 4.2));
-  }
-
-  return normalizeWaveformData(result);
-}
-
-function normalizeWaveformData(data) {
-  const maxValue = Math.max(...data, 0.01);
-  return data.map(value => Math.max(0.04, Math.min(1, value / maxValue)));
-}
-
-function createFallbackWaveformData(bars) {
-  const result = [];
-
-  for (let i = 0; i < bars; i++) {
-    const value =
-      0.10 +
-      0.38 * Math.abs(Math.sin(i * 0.17)) +
-      0.32 * Math.abs(Math.sin(i * 0.041 + 1.9)) +
-      0.20 * Math.abs(Math.sin(i * 0.77 + 0.4));
-
-    result.push(Math.min(1, value));
-  }
-
-  return normalizeWaveformData(result);
-}
-
-function resizeCanvasToDisplaySize(canvas) {
-  const rect = canvas.getBoundingClientRect();
-  const ratio = window.devicePixelRatio || 1;
-  const width = Math.max(1, Math.floor(rect.width * ratio));
-  const height = Math.max(1, Math.floor(rect.height * ratio));
-
-  if (canvas.width !== width || canvas.height !== height) {
-    canvas.width = width;
-    canvas.height = height;
-  }
-}
-
-function drawAudioVisualizerFrame(canvas, media) {
-  const ctx = canvas.getContext('2d');
-
-  resizeCanvasToDisplaySize(canvas);
-
-  const width = canvas.width;
-  const height = canvas.height;
-  const duration = media && media.duration && !isNaN(media.duration) ? media.duration : 0;
-  const current = media && media.currentTime ? media.currentTime : 0;
-  const progress = duration ? Math.max(0, Math.min(1, current / duration)) : 0;
-
-  if (audioAnalyser) {
-    const liveData = new Uint8Array(audioAnalyser.frequencyBinCount);
-    audioAnalyser.getByteFrequencyData(liveData);
-    drawLiveAudioBars(ctx, width, height, liveData);
-    drawProgressLine(ctx, width, height, progress);
-    return;
-  }
-
-  drawWaveformBars(ctx, width, height, audioWaveformData || createFallbackWaveformData(160), progress);
-}
-
-function drawWaveformBars(ctx, width, height, data, progress) {
-  ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = '#eaf0f7';
-  ctx.fillRect(0, 0, width, height);
-
-  const bars = data.length;
-  const gap = Math.max(1, Math.floor(width / bars * 0.18));
-  const barWidth = Math.max(2, Math.floor((width - gap * (bars - 1)) / bars));
-  const progressX = width * progress;
-
-  for (let i = 0; i < bars; i++) {
-    const value = Math.max(0.04, Math.min(1, data[i] || 0));
-    const barHeight = Math.max(3, value * height * 0.86);
-    const x = i * (barWidth + gap);
-    const y = (height - barHeight) / 2;
-
-    ctx.fillStyle = x <= progressX ? '#64748b' : '#a8b7c9';
-    roundRect(ctx, x, y, barWidth, barHeight, Math.min(3, barWidth / 2));
-    ctx.fill();
-  }
-}
-
-function drawLiveAudioBars(ctx, width, height, data) {
-  ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = '#eaf0f7';
-  ctx.fillRect(0, 0, width, height);
-
-  const bars = 96;
-  const step = Math.max(1, Math.floor(data.length / bars));
-  const gap = Math.max(1, Math.floor(width / bars * 0.20));
-  const barWidth = Math.max(2, Math.floor((width - gap * (bars - 1)) / bars));
-
-  ctx.fillStyle = '#64748b';
-
-  for (let i = 0; i < bars; i++) {
-    let sum = 0;
-
-    for (let j = 0; j < step; j++) {
-      sum += data[i * step + j] || 0;
-    }
-
-    let value = sum / step / 255;
-    value = Math.pow(value, 0.55);
-
-    const barHeight = Math.max(3, value * height * 0.90);
-    const x = i * (barWidth + gap);
-    const y = (height - barHeight) / 2;
-
-    roundRect(ctx, x, y, barWidth, barHeight, Math.min(3, barWidth / 2));
-    ctx.fill();
-  }
-}
-
-function drawProgressLine(ctx, width, height, progress) {
-  const x = width * progress;
-
-  ctx.strokeStyle = '#334155';
-  ctx.lineWidth = Math.max(1, Math.floor(width / 600));
-  ctx.beginPath();
-  ctx.moveTo(x, 4);
-  ctx.lineTo(x, height - 4);
-  ctx.stroke();
-}
-
-function roundRect(ctx, x, y, width, height, radius) {
-  const r = Math.min(radius, width / 2, height / 2);
-
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.lineTo(x + width - r, y);
-  ctx.quadraticCurveTo(x + width, y, x + width, y + r);
-  ctx.lineTo(x + width, y + height - r);
-  ctx.quadraticCurveTo(x + width, y + height, x + width - r, y + height);
-  ctx.lineTo(x + r, y + height);
-  ctx.quadraticCurveTo(x, y + height, x, y + height - r);
-  ctx.lineTo(x, y + r);
-  ctx.quadraticCurveTo(x, y, x + r, y);
-  ctx.closePath();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
