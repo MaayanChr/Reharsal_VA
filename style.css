@@ -58,6 +58,27 @@ h2, h3 {
   display: block;
 }
 
+.audio-volume-control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #334155;
+  direction: rtl;
+}
+
+.audio-volume-control input[type="range"] {
+  flex: 1;
+  min-width: 120px;
+}
+
+.audio-volume-value {
+  min-width: 36px;
+  text-align: left;
+  direction: ltr;
+}
+
 #currentTitle {
   margin-top: 10px;
   font-weight: bold;

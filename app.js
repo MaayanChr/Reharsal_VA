@@ -294,7 +294,43 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
   media.addEventListener('ended', handleSegmentEnded);
 
   wrapper.appendChild(media);
+
+  if (mediaType === 'audio') {
+    addAudioVolumeControl(wrapper, media);
+  }
+
   currentMode = 'html';
+}
+
+function addAudioVolumeControl(wrapper, media) {
+  const control = document.createElement('div');
+  control.className = 'audio-volume-control';
+
+  const label = document.createElement('span');
+  label.textContent = 'עוצמה';
+
+  const slider = document.createElement('input');
+  slider.type = 'range';
+  slider.min = '0';
+  slider.max = '1';
+  slider.step = '0.01';
+  slider.value = String(media.volume);
+  slider.setAttribute('aria-label', 'עוצמת קול');
+
+  const value = document.createElement('span');
+  value.className = 'audio-volume-value';
+  value.textContent = `${Math.round(media.volume * 100)}%`;
+
+  slider.addEventListener('input', () => {
+    media.volume = Number(slider.value);
+    media.muted = media.volume === 0;
+    value.textContent = `${Math.round(media.volume * 100)}%`;
+  });
+
+  control.appendChild(label);
+  control.appendChild(slider);
+  control.appendChild(value);
+  wrapper.appendChild(control);
 }
 
 
