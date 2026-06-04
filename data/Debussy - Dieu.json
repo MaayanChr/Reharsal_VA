@@ -49,36 +49,36 @@
     "all": [
       {
         "title": "סופרן",
-        "source": "gdrive",
+        "source": "url",
         "ltr": false,
         "type": "audio",
-        "fileId": "1S1_A0ekpgpFKrkTcC7IdvfQSaluKiZQ9"
+        "url": "https://drive.google.com/file/d/1LdBKm4g7NYJWo9VwBSVpbN8uMsubLcUM/view?usp=drive_link"
       },
       {
         "title": "אלט",
-        "source": "gdrive",
+        "source": "url",
         "ltr": false,
         "type": "audio",
-        "fileId": "1yJhAeol9BmKRN286FZmjCZCer7f9AU7I"
+        "url": "https://drive.google.com/file/d/1yJhAeol9BmKRN286FZmjCZCer7f9AU7I/view?usp=drive_link"
       },
       {
         "title": "טנור",
-        "source": "gdrive",
+        "source": "url",
         "ltr": false,
         "type": "audio",
-        "fileId": "1bFVkSZLWtFUtPqjnVkWRJyHLVeeMbdUc"
+        "url": "https://drive.google.com/file/d/1bFVkSZLWtFUtPqjnVkWRJyHLVeeMbdUc/view?usp=drive_link"
       },
       {
         "title": "בס",
-        "source": "gdrive",
+        "source": "url",
         "ltr": false,
         "type": "audio",
-        "fileId": "1LdBKm4g7NYJWo9VwBSVpbN8uMsubLcUM"
+        "url": "https://drive.google.com/file/d/1LdBKm4g7NYJWo9VwBSVpbN8uMsubLcUM/view?usp=drive_link"
       },
       {
         "title": "ביצוע נבחר",
         "source": "youtube",
-        "ltr": true,
+        "ltr": false,
         "videoId": "03OjclbPEno",
         "start": 0
       }
