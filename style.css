@@ -38,6 +38,17 @@ h2, h3 {
   height: 100%;
 }
 
+#htmlAudio {
+  width: 92%;
+}
+
+.video-wrapper.audio-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
 #currentTitle {
   margin-top: 10px;
   font-weight: bold;

@@ -3,6 +3,7 @@ let libraryData = null;
 let currentGroup = null;
 let youtubeReady = false;
 let currentMode = null; // youtube / html / null
+let currentHtmlMediaType = null; // video / audio / null
 const SKIP_VALUES = [-30, -15, -10, -5, -1, 1, 5, 10, 15, 30];
 let skipButtonsTimer = null;
 let currentSegment = null;
@@ -161,12 +162,12 @@ function loadSegment(segment, autoplay) {
   currentSegment = segment;
   renderSegmentButtons();
   const currentTitle = document.getElementById('currentTitle');
-  
+
   const groupLabel = getCurrentGroupLabel();
   currentTitle.textContent = groupLabel
 	  ? `${groupLabel} -----> ${segment.title}`
 	  : segment.title;
-  
+
   applyTextDirection(currentTitle, segment);
 
   const source = segment.source || 'youtube';
@@ -177,19 +178,51 @@ function loadSegment(segment, autoplay) {
   }
 
   if (source === 'gdrive') {
-    loadHtmlVideo(getGoogleDriveDirectUrl(segment.fileId), autoplay);
+    loadHtmlMedia(
+      getGoogleDriveDirectUrl(segment.fileId),
+      autoplay,
+      getSegmentMediaType(segment, 'video')
+    );
     showMobilePlayer();
     return;
   }
 
-  if (source === 'url') {
-    loadHtmlVideo(segment.url, autoplay);
+  if (source === 'url' || source === 'audio' || source === 'video') {
+    loadHtmlMedia(
+      segment.url,
+      autoplay,
+      getSegmentMediaType(segment, source === 'audio' ? 'audio' : 'video')
+    );
     showMobilePlayer();
     return;
   }
 
   currentTitle.innerHTML =
     `<span class="error">סוג מקור לא נתמך: ${source}</span>`;
+}
+
+function getSegmentMediaType(segment, fallbackType) {
+  const explicitType = (segment.type || segment.mediaType || '').toLowerCase();
+
+  if (explicitType === 'audio' || explicitType === 'video') {
+    return explicitType;
+  }
+
+  return detectMediaType(segment.url || '', fallbackType);
+}
+
+function detectMediaType(url, fallbackType) {
+  const cleanUrl = String(url).split('?')[0].split('#')[0].toLowerCase();
+
+  if (/\.(mp3|wav|m4a|aac|ogg|oga|opus|flac)$/.test(cleanUrl)) {
+    return 'audio';
+  }
+
+  if (/\.(mp4|webm|mov|m4v|ogv)$/.test(cleanUrl)) {
+    return 'video';
+  }
+
+  return fallbackType || 'video';
 }
 
 function loadYouTubeSegment(segment, autoplay) {
@@ -227,32 +260,47 @@ function loadYouTubeSegment(segment, autoplay) {
 }
 
 function loadHtmlVideo(videoUrl, autoplay) {
+  loadHtmlMedia(videoUrl, autoplay, 'video');
+}
+
+function loadHtmlMedia(mediaUrl, autoplay, mediaType) {
   const wrapper = document.getElementById('videoWrapper');
 
   stopCurrentVideo();
   wrapper.innerHTML = '';
+  wrapper.classList.remove('audio-mode');
 
-  const video = document.createElement('video');
-  video.id = 'htmlVideo';
-  video.controls = true;
-  video.src = videoUrl;
+  const safeMediaType = mediaType === 'audio' ? 'audio' : 'video';
+  const media = document.createElement(safeMediaType);
 
-  if (autoplay) {
-    video.autoplay = true;
+  media.id = safeMediaType === 'audio' ? 'htmlAudio' : 'htmlVideo';
+  media.controls = true;
+  media.src = mediaUrl;
+
+  if (safeMediaType === 'audio') {
+    wrapper.classList.add('audio-mode');
+    media.preload = 'metadata';
   }
 
-  wrapper.appendChild(video);
+  if (autoplay) {
+    media.autoplay = true;
+  }
+
+  wrapper.appendChild(media);
   currentMode = 'html';
-  video.addEventListener('timeupdate', updateSkipButtons);
-  video.addEventListener('loadedmetadata', updateSkipButtons);
+  currentHtmlMediaType = safeMediaType;
+  media.addEventListener('timeupdate', updateSkipButtons);
+  media.addEventListener('loadedmetadata', updateSkipButtons);
 }
 
 function ensureYouTubeContainer() {
   const wrapper = document.getElementById('videoWrapper');
 
   if (currentMode !== 'youtube') {
+    wrapper.classList.remove('audio-mode');
     wrapper.innerHTML = '<div id="player"></div>';
     player = null;
+    currentHtmlMediaType = null;
   }
 }
 
@@ -260,10 +308,12 @@ function clearPlayer() {
   stopCurrentVideo();
 
   const wrapper = document.getElementById('videoWrapper');
+  wrapper.classList.remove('audio-mode');
   wrapper.innerHTML = '<div id="player"></div>';
 
   player = null;
   currentMode = null;
+  currentHtmlMediaType = null;
 }
 
 function stopCurrentVideo() {
@@ -272,12 +322,17 @@ function stopCurrentVideo() {
   }
 
   if (currentMode === 'html') {
-    const video = document.getElementById('htmlVideo');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
+    const media = getHtmlMediaElement();
+    if (media) {
+      media.pause();
+      media.currentTime = 0;
     }
   }
+}
+
+function getHtmlMediaElement() {
+  return document.getElementById('htmlVideo') ||
+    document.getElementById('htmlAudio');
 }
 
 function getGoogleDriveDirectUrl(fileId) {
@@ -443,9 +498,9 @@ function getCurrentVideoTime() {
   }
 
   if (currentMode === 'html') {
-    const video = document.getElementById('htmlVideo');
-    if (video) {
-      return video.currentTime;
+    const media = getHtmlMediaElement();
+    if (media) {
+      return media.currentTime;
     }
   }
 
@@ -460,9 +515,9 @@ function getVideoDuration() {
   }
 
   if (currentMode === 'html') {
-    const video = document.getElementById('htmlVideo');
-    if (video && !isNaN(video.duration)) {
-      return video.duration;
+    const media = getHtmlMediaElement();
+    if (media && !isNaN(media.duration)) {
+      return media.duration;
     }
   }
 
@@ -487,10 +542,10 @@ function skipVideo(seconds) {
   }
 
   if (currentMode === 'html') {
-    const video = document.getElementById('htmlVideo');
+    const media = getHtmlMediaElement();
 
-    if (video) {
-      video.currentTime = target;
+    if (media) {
+      media.currentTime = target;
     }
   }
 
@@ -503,10 +558,10 @@ function jumpToStart() {
   }
 
   if (currentMode === 'html') {
-    const video = document.getElementById('htmlVideo');
+    const media = getHtmlMediaElement();
 
-    if (video) {
-      video.currentTime = 0;
+    if (media) {
+      media.currentTime = 0;
     }
   }
 
@@ -525,10 +580,10 @@ function jumpToEnd() {
   }
 
   if (currentMode === 'html') {
-    const video = document.getElementById('htmlVideo');
+    const media = getHtmlMediaElement();
 
-    if (video) {
-      video.currentTime = duration;
+    if (media) {
+      media.currentTime = duration;
     }
   }
 
@@ -641,11 +696,10 @@ function jumpToExactTime() {
   }
 
   if (currentMode === 'html') {
-    const video =
-      document.getElementById('htmlVideo');
+    const media = getHtmlMediaElement();
 
-    if (video) {
-      video.currentTime = target;
+    if (media) {
+      media.currentTime = target;
     }
   }
 
