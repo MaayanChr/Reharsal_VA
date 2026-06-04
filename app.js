@@ -7,6 +7,7 @@ const SKIP_VALUES = [-30, -15, -10, -5, -1, 1, 5, 10, 15, 30];
 let skipButtonsTimer = null;
 let currentSegment = null;
 let advancingAfterEnded = false;
+let waveSurfer = null;
 
 function getDataFileName() {
   const params = new URLSearchParams(window.location.search);
@@ -253,21 +254,37 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType) {
 
   stopCurrentVideo();
   wrapper.innerHTML = '';
+  destroyWaveSurfer();
 
   wrapper.classList.toggle('audio-wrapper', mediaType === 'audio');
 
-  const media = document.createElement(mediaType === 'audio' ? 'audio' : 'video');
-  media.id = 'htmlVideo';
-  media.controls = true;
-  media.src = mediaUrl;
+	const media = document.createElement(mediaType === 'audio' ? 'audio' : 'video');
+	media.id = 'htmlVideo';
+	media.controls = true;
+	media.src = mediaUrl;
 
-  if (mediaType === 'audio') {
-    media.className = 'audio-player';
-  }
+	if (mediaType === 'audio') {
+	  media.className = 'audio-player';
 
-  if (autoplay) {
-    media.autoplay = true;
-  }
+	  const wave = document.createElement('div');
+	  wave.id = 'waveform';
+	  wrapper.appendChild(wave);
+	}
+
+	if (autoplay) {
+	  media.autoplay = true;
+	}
+
+	wrapper.appendChild(media);
+	currentMode = 'html';
+
+	media.addEventListener('timeupdate', updateSkipButtons);
+	media.addEventListener('loadedmetadata', updateSkipButtons);
+	media.addEventListener('ended', handleSegmentEnded);
+
+	if (mediaType === 'audio') {
+	  initWaveSurfer(mediaUrl, media, autoplay);
+}
 
   wrapper.appendChild(media);
   currentMode = 'html';
@@ -287,6 +304,7 @@ function ensureYouTubeContainer() {
     wrapper.classList.remove('audio-wrapper');
     wrapper.innerHTML = '<div id="player"></div>';
     player = null;
+	destroyWaveSurfer();
   }
 }
 
@@ -299,6 +317,7 @@ function clearPlayer() {
 
   player = null;
   currentMode = null;
+  destroyWaveSurfer();
 }
 
 function stopCurrentVideo() {
@@ -771,6 +790,41 @@ function jumpToExactTime() {
   }
 
   updateSkipButtons();
+}
+
+function destroyWaveSurfer() {
+  if (waveSurfer) {
+    waveSurfer.destroy();
+    waveSurfer = null;
+  }
+}
+
+function initWaveSurfer(mediaUrl, media, autoplay) {
+  if (!window.WaveSurfer) {
+    return;
+  }
+
+  waveSurfer = WaveSurfer.create({
+    container: '#waveform',
+    url: mediaUrl,
+    media: media,
+    height: 48,
+    waveColor: '#cbd5e1',
+    progressColor: '#64748b',
+    cursorColor: '#334155',
+    barWidth: 2,
+    barGap: 1,
+    barRadius: 2,
+    normalize: true
+  });
+
+  waveSurfer.on('ready', () => {
+    updateSkipButtons();
+
+    if (autoplay) {
+      media.play().catch(() => {});
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
