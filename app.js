@@ -407,14 +407,6 @@ function initMobileMode() {
   document.body.classList.remove('mobile-player-mode');
 
   if (isMobileView()) {
-    document.body.classList.add('mobile-player-mode');
-  }
-}
-
-  document.body.classList.remove('mobile-menu-mode');
-  document.body.classList.remove('mobile-player-mode');
-
-  if (isMobileView()) {
     document.body.classList.add('mobile-menu-mode');
   }
 }
@@ -433,6 +425,28 @@ function setupOpenFullButton() {
 setupOpenFullButton();
 function isInsideIframe() {
   return window.self !== window.top;
+}
+
+function autoOpenFullScreenOnMobile() {
+  if (!isMobileView()) {
+    return;
+  }
+
+  if (!isInsideIframe()) {
+    return;
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('autoFull') === '1') {
+    return;
+  }
+
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set('return', document.referrer || '');
+  currentUrl.searchParams.set('autoFull', '1');
+
+  window.open(currentUrl.toString(), '_blank');
 }
 
 function setupOpenFullButton() {
@@ -861,6 +875,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
+autoOpenFullScreenOnMobile();
 setupOpenFullButton();
 loadLibraryData();
