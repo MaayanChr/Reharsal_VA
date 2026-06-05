@@ -1,17 +1,18 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 16px;
+  padding: 0;
   background: #f7f7f7;
   direction: rtl;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 320px;
-  gap: 16px;
+  gap: 8px;
 }
 
 .video-panel,
@@ -442,4 +443,60 @@ button:hover:not(:disabled) {
     gap: 10px;
     font-size: 12px;
   }
+}
+#segmentButtons {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* מחשב */
+@media (min-width: 801px) {
+  #segmentButtons {
+    max-height: calc(100vh - 240px);
+  }
+}
+
+/* נייד */
+@media (max-width: 800px) {
+  #segmentButtons {
+    max-height: calc(100vh - 220px);
+  }
+}
+/* השארת אזור הקולות והכותרת קטעים קבועים בזמן גלילת רשימת הקטעים */
+
+.buttons-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.groups-title-row,
+#groupButtons,
+#groupButtons2,
+.buttons-panel > h3 {
+  position: sticky;
+  background: white;
+  z-index: 10;
+}
+
+.groups-title-row {
+  top: 0;
+}
+
+#groupButtons {
+  top: 42px;
+}
+
+#groupButtons2 {
+  top: 86px;
+}
+
+.buttons-panel > h3 {
+  top: 130px;
+}
+
+#segmentButtons {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 170px);
 }
