@@ -512,7 +512,9 @@ button:hover:not(:disabled) {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-top: 16px;
-  scroll-padding-top: 16px;
+}
+
+.segment-button:first-child {
+  margin-top: 8px;
 }
 }
