@@ -10,7 +10,7 @@ let advancingAfterEnded = false;
 let audioVisualizerAnimationId = null;
 let audioWaveformData = null;
 let audioVisualizerMedia = null;
-
+const DEFAULT_RETURN_URL = 'https://sites.google.com/view/maayanchr/homepage';
 
 function getDataFileName() {
   const params = new URLSearchParams(window.location.search);
@@ -428,6 +428,27 @@ function isInsideIframe() {
   return window.self !== window.top;
 }
 
+function autoOpenFullScreenOnMobile() {
+  if (!isMobileView()) {
+    return;
+  }
+
+  if (!isInsideIframe()) {
+    return;
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('autoFull') === '1') {
+    return;
+  }
+
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set('return', document.referrer || DEFAULT_RETURN_URL);
+  currentUrl.searchParams.set('autoFull', '1');
+
+  window.open(currentUrl.toString(), '_blank');
+}
 
 function setupOpenFullButton() {
   const btn = document.getElementById('openFullBtn');
@@ -437,7 +458,7 @@ function setupOpenFullButton() {
   }
 
   const params = new URLSearchParams(window.location.search);
-  const returnUrl = params.get('return');
+  const returnUrl = params.get('return') || DEFAULT_RETURN_URL;
 
   if (isInsideIframe()) {
     btn.textContent = 'פתח במסך מלא';
@@ -855,6 +876,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
+autoOpenFullScreenOnMobile();
 setupOpenFullButton();
 loadLibraryData();
