@@ -513,3 +513,16 @@ button:hover:not(:disabled) {
   overflow-x: hidden;
   min-height: 0;
 }
+
+@media (max-width: 800px) {
+  body.mobile-menu-mode .buttons-panel .playback-options {
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 12px;
+  }
+}
