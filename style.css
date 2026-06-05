@@ -483,29 +483,23 @@ button:hover:not(:disabled) {
   padding-top: 4px;
 }
 
-.groups-title-row,
-#groupButtons,
-#groupButtons2,
-.buttons-panel > h3 {
-  position: sticky;
-  background: white;
-  z-index: 10;
+.buttons-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
-.groups-title-row {
-  top: 0;
+#segmentsTitle {
+  margin: 10px 0 12px 0;
+  flex-shrink: 0;
 }
 
-#groupButtons {
-  top: 42px;
-}
-
-#groupButtons2 {
-  top: 86px;
-}
-
-.buttons-panel > h3 {
-  top: 130px;
+#segmentButtons {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #segmentsTitle {
