@@ -47,8 +47,8 @@ async function loadLibraryData() {
     renderGroupButtons();
     renderSegmentButtons();
     initMobileMode();
-	createSkipButtons();
-	startSkipButtonsUpdater();
+    createSkipButtons();
+    startSkipButtonsUpdater();
     setupPlaybackOptions();
 
   } catch (error) {
@@ -140,10 +140,10 @@ function renderSegmentButtons() {
     const btn = document.createElement('button');
     btn.className = 'segment-button';
     btn.textContent = segment.title;
-	
-	if (currentSegment === segment) {
-	  btn.classList.add('active');
-	}
+
+    if (currentSegment === segment) {
+      btn.classList.add('active');
+    }
 
     applyTextDirection(btn, segment);
 
@@ -411,23 +411,10 @@ function initMobileMode() {
     document.body.classList.add('mobile-menu-mode');
   }
 }
-function setupOpenFullButton() {
-  const btn = document.getElementById('openFullBtn');
 
-  if (!btn) {
-    return;
-  }
-
-  btn.onclick = function () {
-    window.open(window.location.href, '_blank');
-  };
-}
-
-setupOpenFullButton();
 function isInsideIframe() {
   return window.self !== window.top;
 }
-
 
 function setupOpenFullButton() {
   const btn = document.getElementById('openFullBtn');
@@ -444,7 +431,13 @@ function setupOpenFullButton() {
 
     btn.onclick = function () {
       const currentUrl = new URL(window.location.href);
-      currentUrl.searchParams.set('return', document.referrer || '');
+
+      if (
+        document.referrer &&
+        document.referrer.startsWith('https://sites.google.com/')
+      ) {
+        currentUrl.searchParams.set('return', document.referrer);
+      }
 
       window.open(currentUrl.toString(), '_blank');
     };
@@ -452,14 +445,20 @@ function setupOpenFullButton() {
     btn.textContent = 'חזרה לאתר המקהלה';
 
     btn.onclick = function () {
-      if (returnUrl) {
+      if (
+        returnUrl &&
+        returnUrl.startsWith('https://sites.google.com/')
+      ) {
         window.location.href = returnUrl;
+      } else if (window.opener) {
+        window.close();
       } else {
         history.back();
       }
     };
   }
 }
+
 function setupPlaybackOptions() {
   const playAll = document.getElementById('playAllCheckbox');
   const repeatOne = document.getElementById('repeatSegmentCheckbox');
