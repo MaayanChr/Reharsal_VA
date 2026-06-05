@@ -508,13 +508,14 @@ button:hover:not(:disabled) {
   top: 130px;
 }
 
+#segmentsTitle {
+  margin: 10px 0 12px 0;
+  flex-shrink: 0;
+}
+
 #segmentButtons {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-.segment-button:first-child {
-  margin-top: 8px;
-}
+  min-height: 0;
 }
