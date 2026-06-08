@@ -1,0 +1,105 @@
+{
+  "libraryTitle": "Salve Regina - Hydn",
+  "defaultGroup": "all",
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+  "groups2": [
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    }
+  ],
+  "segments": {
+    "soprano": [],
+    "alto": [],
+    "tenor": [],
+    "bass": [],
+    "all": [
+      {
+        "title": "Adagio",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 0
+      },
+      {
+        "title": "Adagio - Bar 12",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 54
+      },
+      {
+        "title": "Alegro - Bar 110",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 500
+      },
+      {
+        "title": "Alegro - Bar 125 Solo T",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 519
+      },
+      {
+        "title": "Alegro - Bar 185 Solo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 600
+      },
+      {
+        "title": "Alegro - Bar 197 Solo T",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 618
+      },
+      {
+        "title": "Largo  - Bar 284 Solo T",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 750
+      }
+    ],
+    "soprano2": [],
+    "alto2": [],
+    "tenor2": [],
+    "bass2": []
+  }
+}
