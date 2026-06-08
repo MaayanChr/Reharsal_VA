@@ -1,0 +1,105 @@
+{
+  "libraryTitle": "Salve Regina - Haydn",
+  "defaultGroup": "all",
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+  "groups2": [
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    }
+  ],
+  "segments": {
+    "soprano": [],
+    "alto": [],
+    "tenor": [],
+    "bass": [],
+    "all": [
+      {
+        "title": "Adagio",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 0
+      },
+      {
+        "title": "Alegro - p. 12",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 500
+      },
+      {
+        "title": "Alegro - p. 13 chor",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 539
+      },
+      {
+        "title": "Alegro - p. 16 chor",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 600
+      },
+      {
+        "title": "Largo - p. 19 chor",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 799
+      },
+      {
+        "title": "Largo - p. 23 chor",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 927
+      },
+      {
+        "title": "Largo - p. 27 chor",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 1040
+      }
+    ],
+    "soprano2": [],
+    "alto2": [],
+    "tenor2": [],
+    "bass2": []
+  }
+}
