@@ -1,5 +1,5 @@
 {
-  "libraryTitle": "Salve Regina - Haydn",
+  "libraryTitle": "Haydn: Salve Regina - Tuti",
   "defaultGroup": "all",
   "groups": [
     {
@@ -73,28 +73,35 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "pXzVpyjxW2M",
-        "start": 600
+        "start": 639
+      },
+      {
+        "title": "Largo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pXzVpyjxW2M",
+        "start": 750
       },
       {
         "title": "Largo - p. 19 chor",
         "source": "youtube",
         "ltr": true,
         "videoId": "pXzVpyjxW2M",
-        "start": 799
+        "start": 795
       },
       {
         "title": "Largo - p. 23 chor",
         "source": "youtube",
         "ltr": true,
         "videoId": "pXzVpyjxW2M",
-        "start": 927
+        "start": 922
       },
       {
         "title": "Largo - p. 27 chor",
         "source": "youtube",
         "ltr": true,
         "videoId": "pXzVpyjxW2M",
-        "start": 1040
+        "start": 1039
       }
     ],
     "soprano2": [],
