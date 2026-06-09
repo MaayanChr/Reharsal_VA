@@ -42,11 +42,7 @@
     }
   ],
   "segments": {
-    "soprano": [],
-    "alto": [],
-    "tenor": [],
-    "bass": [],
-    "all": [
+    "soprano": [
       {
         "title": "1. Dixit Dominus",
         "source": "youtube",
@@ -55,11 +51,32 @@
         "start": 0
       },
       {
+        "title": "1.1 Dixit Dominus bar 118",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 172
+      },
+      {
         "title": "2. Confitebor",
         "source": "youtube",
         "ltr": true,
         "videoId": "5uHII9B8F0M",
-        "start": 249
+        "start": 248
+      },
+      {
+        "title": "2.1 Confitebor bar 37",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 339
+      },
+      {
+        "title": "2.2 Confitebor bar 66",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 422
       },
       {
         "title": "3. Beatus vir",
@@ -67,6 +84,41 @@
         "ltr": true,
         "videoId": "5uHII9B8F0M",
         "start": 531
+      },
+      {
+        "title": "3.1 Beatus vir bar 33",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 576
+      },
+      {
+        "title": "3.2 Beatus vir bar 60",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 614
+      },
+      {
+        "title": "3.3 Beatus vir bar 91",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 659
+      },
+      {
+        "title": "3.4 Beatus vir bar 114",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 694
+      },
+      {
+        "title": "3.5 Beatus vir bar 142",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 736
       },
       {
         "title": "4. Laudate pueri",
@@ -88,6 +140,179 @@
         "ltr": true,
         "videoId": "5uHII9B8F0M",
         "start": 1277
+      },
+      {
+        "title": "6.1 Magnificat bar 5",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1298
+      },
+      {
+        "title": "6.2 Magnificat bar 27",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1360
+      },
+      {
+        "title": "6.3Magnificat bar 47",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1414
+      },
+      {
+        "title": "6.4 Magnificat bar 54",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1414
+      },
+      {
+        "title": "6.5 Magnificat bar 75",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1485
+      }
+    ],
+    "alto": [],
+    "tenor": [],
+    "bass": [],
+    "all": [
+      {
+        "title": "1. Dixit Dominus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 0
+      },
+      {
+        "title": "1.1 Dixit Dominus bar 129",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 191
+      },
+      {
+        "title": "2. Confitebor",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 248
+      },
+      {
+        "title": "2.1 Confitebor bar 58",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 340
+      },
+      {
+        "title": "2.2 Confitebor bar 76",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 447
+      },
+      {
+        "title": "3. Beatus vir",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 531
+      },
+      {
+        "title": "3.1 Beatus vir bar 42",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 590
+      },
+      {
+        "title": "3.2 Beatus vir bar 75",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 635
+      },
+      {
+        "title": "3.3 Beatus vir bar 105",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 678
+      },
+      {
+        "title": "3.4 Beatus vir bar 125",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 710
+      },
+      {
+        "title": "3.5 Beatus vir bar 154",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 754
+      },
+      {
+        "title": "4. Laudate pueri",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 816
+      },
+      {
+        "title": "5. Laudate Dominum",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1015
+      },
+      {
+        "title": "5.1 Laudate Dominum bar42",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1152
+      },
+      {
+        "title": "6. Magnificat",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1277
+      },
+      {
+        "title": "6.1 Magnificat bar 11",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1312
+      },
+      {
+        "title": "6.2 Magnificat bar 34",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1378
+      },
+      {
+        "title": "6.3 Magnificat bar 59",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1444
+      },
+      {
+        "title": "6.4 Magnificat bar 81",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 1501
       }
     ],
     "soprano2": [],
