@@ -526,3 +526,578 @@ button:hover:not(:disabled) {
     font-size: 12px;
   }
 }
+
+/* =========================================================
+   תיקוני תצוגת טלפון בלבד - ללא שינוי במבנה הנתונים/JSON
+   ========================================================= */
+@media (max-width: 800px) {
+  html,
+  body {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  body {
+    background: #f7f7f7;
+  }
+
+  .container {
+    height: 100dvh;
+    max-height: 100dvh;
+    padding: 5px;
+    gap: 5px;
+    overflow: hidden;
+  }
+
+  .video-panel,
+  .buttons-panel {
+    padding: 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .video-panel h2 {
+    font-size: clamp(18px, 5vw, 26px);
+    line-height: 1.15;
+    margin: 0 0 6px 0;
+    text-align: center;
+  }
+
+  #backToMenuBtn {
+    width: auto;
+    margin: 0 0 6px 0;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  .player-toolbar {
+    margin-top: 5px;
+  }
+
+  body.mobile-player-mode .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.mobile-player-mode .video-panel {
+    display: block;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    flex: 0 0 auto;
+  }
+
+  body.mobile-player-mode .buttons-panel {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  body.mobile-menu-mode .buttons-panel {
+    display: flex;
+    height: calc(100dvh - 10px);
+    max-height: calc(100dvh - 10px);
+  }
+
+  #segmentsTitle {
+    margin: 6px 0;
+  }
+
+  #segmentButtons {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .segment-button {
+    font-size: clamp(13px, 3.4vw, 16px);
+    padding: 8px 9px;
+    margin-bottom: 5px;
+  }
+}
+
+/* טלפון אופקי: נגן מימין ורשימת קטעים משמאל */
+@media (max-width: 950px) and (max-height: 520px) and (orientation: landscape) {
+  .container,
+  body.mobile-player-mode .container,
+  body.mobile-menu-mode .container {
+    display: grid;
+    grid-template-columns: minmax(0, 58%) minmax(250px, 42%);
+    grid-template-rows: 1fr;
+    height: 100dvh;
+    max-height: 100dvh;
+    gap: 6px;
+    padding: 5px;
+  }
+
+  body.mobile-player-mode .video-panel,
+  body.mobile-player-mode .buttons-panel,
+  body.mobile-menu-mode .buttons-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: calc(100dvh - 10px);
+    max-height: calc(100dvh - 10px);
+    overflow: hidden;
+  }
+
+  body.mobile-menu-mode .video-panel {
+    display: none;
+  }
+
+  .video-panel h2 {
+    font-size: clamp(16px, 3.2vw, 22px);
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #backToMenuBtn {
+    display: none;
+  }
+
+  .video-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .player-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "title"
+      "positive"
+      "negative";
+    gap: 3px;
+  }
+
+  .skip-positive,
+  .skip-negative {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .skip-buttons button {
+    min-width: 27px;
+    padding: 2px 3px;
+    font-size: 10px;
+  }
+
+  .groups-title-row {
+    gap: 5px;
+  }
+
+  .buttons-panel h3 {
+    margin: 3px 0;
+    font-size: 14px;
+  }
+
+  .playback-options {
+    margin: 2px 0 4px 0 !important;
+    gap: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .group-buttons {
+    gap: 3px;
+    margin-bottom: 5px;
+  }
+
+  .group-buttons button {
+    font-size: 11px;
+    padding: 5px 2px;
+  }
+
+  .segment-button {
+    font-size: 12px;
+    padding: 6px 7px;
+    margin-bottom: 4px;
+  }
+}
+
+
+/* =========================================================
+   תיקון סופי: מובייל מציג נגן ורשימה יחד, בלי לפגוע במחשב
+   ========================================================= */
+@media (max-width: 800px) {
+  html,
+  body {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100dvh;
+    max-height: 100dvh;
+    padding: 5px;
+    gap: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  body.mobile-menu-mode .video-panel,
+  body.mobile-player-mode .video-panel,
+  body.mobile-menu-mode .buttons-panel,
+  body.mobile-player-mode .buttons-panel,
+  .video-panel,
+  .buttons-panel {
+    display: flex !important;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .video-panel {
+    flex: 0 0 auto;
+    padding: 7px;
+    overflow: visible !important;
+    min-height: 0;
+  }
+
+  .buttons-panel {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 7px;
+    overflow: hidden !important;
+  }
+
+  .video-panel h2 {
+    font-size: clamp(18px, 5vw, 26px);
+    line-height: 1.15;
+    margin: 0 0 6px 0;
+    text-align: center;
+  }
+
+  #backToMenuBtn {
+    display: none !important;
+  }
+
+  #openFullBtn[style*="display: none"] {
+    display: none !important;
+  }
+
+  .video-wrapper {
+    flex: 0 0 auto;
+  }
+
+  #jumpToTimeContainer {
+    display: none;
+  }
+
+  .player-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "title positive"
+      "negative negative";
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+    direction: ltr;
+  }
+
+  .player-toolbar #currentTitle {
+    grid-area: title;
+    font-size: 12px;
+    line-height: 1.2;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .skip-buttons {
+    display: contents;
+  }
+
+  .skip-row {
+    display: flex;
+    gap: 4px;
+    direction: ltr;
+    flex-wrap: wrap;
+  }
+
+  .skip-positive {
+    grid-area: positive;
+    justify-content: flex-end;
+  }
+
+  .skip-negative {
+    grid-area: negative;
+    justify-content: flex-end;
+  }
+
+  .skip-buttons button {
+    min-width: 28px;
+    padding: 2px 3px;
+    font-size: 10px;
+  }
+
+  .groups-title-row {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .buttons-panel h3 {
+    margin: 4px 0 6px 0;
+    font-size: 15px;
+  }
+
+  .playback-options {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    margin: 2px 0 5px 0;
+  }
+
+  .group-buttons {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    margin-bottom: 6px;
+  }
+
+  .group-buttons button {
+    font-size: 12px;
+    padding: 6px 2px;
+    border-radius: 6px;
+  }
+
+  #segmentsTitle {
+    margin: 5px 0 6px 0;
+    flex-shrink: 0;
+  }
+
+  #segmentButtons {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .segment-button {
+    font-size: clamp(13px, 3.4vw, 16px);
+    padding: 8px 9px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+  }
+}
+
+/* טלפון אופקי: נגן מימין, רשימה משמאל */
+@media (max-width: 950px) and (max-height: 520px) and (orientation: landscape) {
+  .container,
+  body.mobile-player-mode .container,
+  body.mobile-menu-mode .container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 58%) minmax(240px, 42%) !important;
+    grid-template-rows: 1fr;
+    height: 100dvh;
+    max-height: 100dvh;
+    gap: 6px;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .video-panel,
+  .buttons-panel,
+  body.mobile-player-mode .video-panel,
+  body.mobile-player-mode .buttons-panel,
+  body.mobile-menu-mode .video-panel,
+  body.mobile-menu-mode .buttons-panel {
+    display: flex !important;
+    flex-direction: column;
+    height: calc(100dvh - 10px);
+    max-height: calc(100dvh - 10px);
+    min-height: 0;
+    overflow: hidden !important;
+  }
+
+  .video-panel h2 {
+    font-size: clamp(16px, 3.2vw, 22px);
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .player-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "title"
+      "positive"
+      "negative";
+    gap: 3px;
+  }
+
+  .skip-positive,
+  .skip-negative {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .buttons-panel h3 {
+    margin: 3px 0;
+    font-size: 14px;
+  }
+
+  .group-buttons {
+    gap: 3px;
+    margin-bottom: 5px;
+  }
+
+  .group-buttons button {
+    font-size: 11px;
+    padding: 5px 2px;
+  }
+
+  .playback-options {
+    margin: 2px 0 4px 0 !important;
+    gap: 8px !important;
+    font-size: 11px !important;
+  }
+
+  .segment-button {
+    font-size: 12px;
+    padding: 6px 7px;
+    margin-bottom: 4px;
+  }
+}
+
+/* =========================================================
+   תיקון נוסף - טלפון בלבד
+   1. כפתורי הקטעים בשני טורים
+   2. בטלפון אופקי: נגן רחב יותר וכפתורי דילוג בשורה אחת
+   3. טאבלט נשאר קרוב יותר לתצוגת מחשב
+   ========================================================= */
+
+/* טלפון אנכי/רגיל: רשימת הקטעים בשני טורים */
+@media (max-width: 800px) {
+  #segmentButtons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    align-content: start;
+  }
+
+  .segment-button {
+    width: 100%;
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* טלפון צר מאוד: עדיין שני טורים, רק כפתורים מעט קומפקטיים יותר */
+@media (max-width: 380px) {
+  .segment-button {
+    font-size: 12px;
+    padding: 7px 6px;
+  }
+}
+
+/* טלפון אופקי: יותר רוחב לנגן, פחות לרשימת הקטעים */
+@media (max-width: 950px) and (max-height: 520px) and (orientation: landscape) {
+  .container,
+  body.mobile-player-mode .container,
+  body.mobile-menu-mode .container {
+    grid-template-columns: minmax(0, 70%) minmax(185px, 30%) !important;
+  }
+
+  /* כפתורי הדילוג בשורה אחת במצב אופקי */
+  .player-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "title skips";
+    align-items: center;
+    gap: 4px;
+  }
+
+  .skip-buttons {
+    grid-area: skips;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    direction: ltr;
+    flex-wrap: nowrap;
+  }
+
+  .skip-row {
+    display: flex !important;
+    flex-direction: row;
+    gap: 3px;
+    flex-wrap: nowrap;
+  }
+
+  .skip-positive,
+  .skip-negative {
+    grid-area: auto;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .skip-buttons button {
+    min-width: 24px;
+    padding: 2px 2px;
+    font-size: 9px;
+  }
+
+  #segmentButtons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .segment-button {
+    font-size: 11px;
+    padding: 6px 5px;
+  }
+}
+
+/* טאבלט: לא להפעיל עליו את הצפיפות של טלפון */
+@media (min-width: 801px) and (max-width: 1100px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 8px;
+  }
+
+  #segmentButtons {
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   תיקון נוסף: כפתורי קטעים - LTR בנייד וצבעי קבוצות מספר
+   ========================================================= */
+
+/* בכל התצוגות: צבע פסטל אחיד לכל קטע שמתחיל באותו מספר שלם */
+.segment-button.segment-numbered:not(.active) {
+  background: var(--segment-group-bg, white);
+}
+
+.segment-button.segment-numbered:hover:not(:disabled):not(.active) {
+  background: var(--segment-group-bg, #eef3ff);
+  filter: brightness(0.98);
+}
+
+/* נייד בלבד: כאשר הקטעים LTR, גם סדר העמודות יהיה LTR */
+@media (max-width: 800px) {
+  #segmentButtons.segment-buttons-ltr {
+    direction: ltr;
+  }
+
+  #segmentButtons.segment-buttons-ltr .segment-button {
+    direction: ltr;
+    text-align: left;
+  }
+}

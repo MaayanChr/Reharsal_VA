@@ -121,6 +121,7 @@ function renderSegmentButtons() {
   const title = document.getElementById('segmentsTitle');
   const container = document.getElementById('segmentButtons');
   container.innerHTML = '';
+  container.classList.remove('segment-buttons-ltr');
 
   if (!currentGroup) {
     title.textContent = 'בחר קול';
@@ -136,10 +137,16 @@ function renderSegmentButtons() {
     return;
   }
 
+  if (segments[0] && segments[0].ltr !== false) {
+    container.classList.add('segment-buttons-ltr');
+  }
+
   segments.forEach(segment => {
     const btn = document.createElement('button');
     btn.className = 'segment-button';
     btn.textContent = segment.title;
+
+    applySegmentNumberColor(btn, segment);
 
     if (currentSegment === segment) {
       btn.classList.add('active');
@@ -153,6 +160,42 @@ function renderSegmentButtons() {
 
     container.appendChild(btn);
   });
+}
+
+function applySegmentNumberColor(button, segment) {
+  const title = String(segment.title || '');
+  const match = title.match(/^\s*(\d+)/);
+
+  if (!match) {
+    return;
+  }
+
+  const number = Number(match[1]);
+
+  if (!Number.isFinite(number)) {
+    return;
+  }
+
+const colors = [
+  '#dbeafe', // כחול
+  '#dcfce7', // ירוק
+  '#fef3c7', // צהוב
+  '#fde2e8', // ורוד
+  '#e9d5ff', // סגול
+  '#fed7aa', // כתום
+  '#bfdbfe', // כחול חזק יותר
+  '#bbf7d0', // ירוק חזק יותר
+  '#fde68a', // צהוב חזק יותר
+  '#fbcfe8', // ורוד חזק יותר
+  '#ddd6fe', // סגול חזק יותר
+  '#fdba74'  // כתום חזק יותר
+];
+
+  button.classList.add('segment-numbered');
+  button.style.setProperty(
+    '--segment-group-bg',
+    colors[(number - 1) % colors.length]
+  );
 }
 
 function applyTextDirection(element, segment) {
@@ -408,12 +451,16 @@ function initMobileMode() {
   document.body.classList.remove('mobile-player-mode');
 
   if (isMobileView()) {
-    document.body.classList.add('mobile-menu-mode');
+    document.body.classList.add('mobile-player-mode');
   }
 }
 
 function isInsideIframe() {
-  return window.self !== window.top;
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
 }
 
 function setupOpenFullButton() {
@@ -426,7 +473,11 @@ function setupOpenFullButton() {
   const params = new URLSearchParams(window.location.search);
   const returnUrl = params.get('return');
 
+  btn.style.display = 'none';
+  btn.onclick = null;
+
   if (isInsideIframe()) {
+    btn.style.display = '';
     btn.textContent = 'פתח במסך מלא';
 
     btn.onclick = function () {
@@ -441,20 +492,19 @@ function setupOpenFullButton() {
 
       window.open(currentUrl.toString(), '_blank');
     };
-  } else {
+
+    return;
+  }
+
+  if (
+    returnUrl &&
+    returnUrl.startsWith('https://sites.google.com/')
+  ) {
+    btn.style.display = '';
     btn.textContent = 'חזרה לאתר המקהלה';
 
     btn.onclick = function () {
-      if (
-        returnUrl &&
-        returnUrl.startsWith('https://sites.google.com/')
-      ) {
-        window.location.href = returnUrl;
-      } else if (window.opener) {
-        window.close();
-      } else {
-        history.back();
-      }
+      window.location.href = returnUrl;
     };
   }
 }
