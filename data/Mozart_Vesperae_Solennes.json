@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Vesperae Solennes",
-  "defaultGroup": "all",
+  "defaultGroup": "soprano",
   "groups": [
     {
       "id": "soprano",
@@ -203,18 +203,25 @@
         "start": 248
       },
       {
-        "title": "2.1 Confitebor bar 58",
+        "title": "2.1 Confitebor bar 35",
         "source": "youtube",
         "ltr": true,
         "videoId": "5uHII9B8F0M",
         "start": 340
       },
       {
-        "title": "2.2 Confitebor bar 76",
+        "title": "2.2 Confitebor bar 58",
         "source": "youtube",
         "ltr": true,
         "videoId": "5uHII9B8F0M",
-        "start": 447
+        "start": 400
+      },
+      {
+        "title": "2.3 Confitebor bar 76",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 450
       },
       {
         "title": "3. Beatus vir",
@@ -238,7 +245,7 @@
         "start": 635
       },
       {
-        "title": "3.3 Beatus vir bar 105",
+        "title": "3.3 Beatus vir bar 103",
         "source": "youtube",
         "ltr": true,
         "videoId": "5uHII9B8F0M",
@@ -266,6 +273,13 @@
         "start": 816
       },
       {
+        "title": "4.1 Laudate pueri bar 91",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "5uHII9B8F0M",
+        "start": 912
+      },
+      {
         "title": "5. Laudate Dominum",
         "source": "youtube",
         "ltr": true,
@@ -273,7 +287,7 @@
         "start": 1015
       },
       {
-        "title": "5.1 Laudate Dominum bar42",
+        "title": "5.1 Laudate Dominum bar 42",
         "source": "youtube",
         "ltr": true,
         "videoId": "5uHII9B8F0M",
@@ -291,7 +305,7 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "5uHII9B8F0M",
-        "start": 1312
+        "start": 1313
       },
       {
         "title": "6.2 Magnificat bar 34",
