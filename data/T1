@@ -1,0 +1,238 @@
+{
+  "libraryTitle": "אאידה - גרנד פינלה -אריאל",
+  "defaultGroup": "soprano",
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+  "groups2": [
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    }
+  ],
+  "segments": {
+    "soprano": [
+      {
+        "title": "Page 119",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1S1_A0ekpgpFKrkTcC7IdvfQSaluKiZQ9"
+      },
+      {
+        "title": "Page 132",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1wVuxyEjPQ761MAPRwqhhGmAb4nBRCbBr"
+      },
+      {
+        "title": "Page 135",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1udPBewdz3KvY7sQNeF7-pToJQsLTjAEP"
+      },
+      {
+        "title": "Page 138",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1i9K8V6T1EWsRJFRoVN3kq7DdtdyCYLw7"
+      },
+      {
+        "title": "Page 142",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1JYMLwFq4xksRZ8j_a_PuZVbzGy3CCzlS"
+      }
+    ],
+    "alto": [
+      {
+        "title": "Page 119",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1CNyMepEIiIWN_G2Eam6bQGJW8oBx6iLG"
+      },
+      {
+        "title": "Page 132",
+        "source": "gdrive",
+        "ltr": true,
+        "fileId": "1T3SPcIsQUe_-nOqFRCakYIXk0-QQ89aR"
+      },
+      {
+        "title": "Page 135",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1n6s-wuqVaadjqwwkOi1eMqH8dOv9DOBS"
+      },
+      {
+        "title": "Page 138",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1fqgQdHlwjTZ4oyIZJOesqZDXsaQM0fOM"
+      },
+      {
+        "title": "Page 142",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1Lhjq1CfoVXCEYgM7njFzqRcZ-X9VtjBn"
+      }
+    ],
+    "tenor": [
+      {
+        "title": "Page 117",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1L2u87r9I0r2sRRGnqHapNv8lMQvLHfZ0"
+      },
+      {
+        "title": "Page 132",
+        "source": "gdrive",
+        "ltr": true,
+        "fileId": "16iz7Y3IHjqrDJ0-BJTmvE70YzpUqxPrr"
+      },
+      {
+        "title": "Page 135",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1BgUDR0jfbocE2XjfHW6EUx9cEQBQbLnA"
+      },
+      {
+        "title": "Page 138",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1ke7daXr3KVsXXU_KMrjLt6fwuZY5pQdP"
+      },
+      {
+        "title": "Page 142",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1wtWy6WtEn5Kj-qFIfkuY6YEKuI3lARKD"
+      }
+    ],
+    "bass": [
+      {
+        "title": "Page 117 B1",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1CXt-AsLJqQBW0V_IktO9TNfLcEgefV-V"
+      },
+      {
+        "title": "Page 117",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1Lew-DSCLVT0-xUFyINgiPKIruXm_Tpha"
+      },
+      {
+        "title": "Page 132",
+        "source": "gdrive",
+        "ltr": true,
+        "fileId": "19IRWlru5k0eZT3KpP8ZsdHmmv9e0CLCC"
+      },
+      {
+        "title": "Page 135",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1RptmBuR6ae8IlLwiVt-nVcA26uKR6Uoe"
+      },
+      {
+        "title": "Page 138",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1wKmBETZMQ1nSskJzyVlpMJlu6FP7O6N4"
+      },
+      {
+        "title": "Page 142",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1wxyirJO5Gn9O2H5TXiu5khw-4YjaTwHN"
+      }
+    ],
+    "all": [],
+    "soprano2": [],
+    "alto2": [],
+    "tenor2": [
+      {
+        "title": "Page 117",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1L5Ud9Tl0HXbucndlk8xcbZekoVklTOhV"
+      },
+      {
+        "title": "Page 132",
+        "source": "gdrive",
+        "ltr": true,
+        "fileId": "16iz7Y3IHjqrDJ0-BJTmvE70YzpUqxPrr"
+      },
+      {
+        "title": "Page 135",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1BgUDR0jfbocE2XjfHW6EUx9cEQBQbLnA"
+      },
+      {
+        "title": "Page 138",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1ke7daXr3KVsXXU_KMrjLt6fwuZY5pQdP"
+      },
+      {
+        "title": "Page 142",
+        "source": "gdrive",
+        "ltr": true,
+        "type": "audio",
+        "fileId": "1fvnZ6K2n2NA7psWuLNURjaQBt9tH_iUx"
+      }
+    ],
+    "bass2": []
+  }
+}
