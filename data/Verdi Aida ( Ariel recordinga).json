@@ -1,6 +1,6 @@
 {
   "libraryTitle": "אאידה - גרנד פינלה -אריאל",
-  "defaultGroup": "bass",
+  "defaultGroup": "soprano",
   "groups": [
     {
       "id": "soprano",
@@ -48,12 +48,13 @@
         "source": "gdrive",
         "ltr": true,
         "type": "audio",
-        "fileId": "1JYMLwFq4xksRZ8j_a_PuZVbzGy3CCzlS"
+        "fileId": "1S1_A0ekpgpFKrkTcC7IdvfQSaluKiZQ9"
       },
       {
         "title": "Page 132",
         "source": "gdrive",
         "ltr": true,
+        "type": "audio",
         "fileId": "1wVuxyEjPQ761MAPRwqhhGmAb4nBRCbBr"
       },
       {
