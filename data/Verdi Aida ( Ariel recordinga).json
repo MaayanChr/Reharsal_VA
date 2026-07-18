@@ -79,13 +79,164 @@
         "url": "media/Aida/S142-end.m4a"
       }
     ],
-    "alto": [],
-    "tenor": [],
-    "bass": [],
+    "alto": [
+      {
+        "title": "Page 119",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/A119.m4a"
+      },
+      {
+        "title": "Page 132",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/A132.m4a"
+      },
+      {
+        "title": "Page 135",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/A135.m4a"
+      },
+      {
+        "title": "Page 138",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/A138-141.m4a"
+      },
+      {
+        "title": "Page 142",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/A142-end.m4a"
+      }
+    ],
+    "tenor": [
+      {
+        "title": "Page 118",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T118 high.m4a"
+      },
+      {
+        "title": "Page 132",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T132.m4a"
+      },
+      {
+        "title": "Page 135",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T135.m4a"
+      },
+      {
+        "title": "Page 138",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T138.m4a"
+      },
+      {
+        "title": "Page 142",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T142-high.m4a"
+      }
+    ],
+    "bass": [
+      {
+        "title": "Page 117",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/B117.m4a"
+      },
+      {
+        "title": "Page 117 B1",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/B117-high.m4a"
+      },
+      {
+        "title": "Page 132",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/B132.m4a"
+      },
+      {
+        "title": "Page 135",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/B135-138.m4a"
+      },
+      {
+        "title": "Page 138",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/B138-141.m4a"
+      },
+      {
+        "title": "Page 142",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/B142-end.m4a"
+      }
+    ],
     "all": [],
     "soprano2": [],
     "alto2": [],
-    "tenor2": [],
+    "tenor2": [
+      {
+        "title": "Page 117",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T117 low.m4a"
+      },
+      {
+        "title": "Page 132",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T132.m4a"
+      },
+      {
+        "title": "Page 135",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T135.m4a"
+      },
+      {
+        "title": "Page 138",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T138.m4a"
+      },
+      {
+        "title": "Page 142",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Aida/T142.m4a"
+      }
+    ],
     "bass2": []
   }
 }
