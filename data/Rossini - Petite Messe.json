@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "bass2",
+  "defaultGroup": "BassSoli",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -752,6 +752,44 @@
         "ltr": true,
         "videoId": "HkClQHm8RIo",
         "start": 57
+      },
+      {
+        "title": "2.2 Gloria-[bars 20-70]",
+        "source": "url",
+        "ltr": true,
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - All Voices.mp4"
+      }
+    ],
+    "SopSoli": [
+      {
+        "title": "2.2 Gloria-[bars 20-70]",
+        "source": "url",
+        "ltr": true,
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Soprano.mp4"
+      }
+    ],
+    "AltSoli": [
+      {
+        "title": "2.2 Gloria-[bars 20-70]",
+        "source": "url",
+        "ltr": true,
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Alto.mp4"
+      }
+    ],
+    "TenSoli": [
+      {
+        "title": "2.2 Gloria-[bars 20-70]",
+        "source": "url",
+        "ltr": true,
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Ténor.mp4"
+      }
+    ],
+    "BassSoli": [
+      {
+        "title": "2.2 Gloria-[bars 20-70]",
+        "source": "url",
+        "ltr": true,
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Ténor.mp4"
       }
     ]
   },
@@ -761,56 +799,72 @@
       "label": "סופרן"
     },
     {
-      "id": "alto",
-      "label": "אלט"
-    },
-    {
-      "id": "tenor",
-      "label": "טנור"
-    },
-    {
-      "id": "bass",
-      "label": "בס"
-    },
-    {
-      "id": "all",
-      "label": "כולם"
+      "id": "sonprano1",
+      "label": "סופרן 1"
     },
     {
       "id": "soprano2",
       "label": "סופרן 2"
     },
     {
-      "id": "alto2",
-      "label": "אלט 2"
-    },
-    {
-      "id": "tenor2",
-      "label": "טנור 2"
-    },
-    {
-      "id": "bass2",
-      "label": "בס 2"
-    },
-    {
-      "id": "Base1",
-      "label": "בס 1"
-    },
-    {
-      "id": "Tenor1",
-      "label": "טנור 1"
-    },
-    {
-      "id": "sonprano1",
-      "label": "סופרן 1"
+      "id": "alto",
+      "label": "אלט"
     },
     {
       "id": "alto1",
       "label": "אלט 1"
     },
     {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "Tenor1",
+      "label": "טנור 1"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "Base1",
+      "label": "בס 1"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    },
+    {
       "id": "solos",
       "label": "סולנים"
+    },
+    {
+      "id": "SopSoli",
+      "label": "סופרן סולו"
+    },
+    {
+      "id": "AltSoli",
+      "label": "אלט סולו"
+    },
+    {
+      "id": "TenSoli",
+      "label": "טנור סולו"
+    },
+    {
+      "id": "BassSoli",
+      "label": "בס סולו"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
     }
   ]
 }
