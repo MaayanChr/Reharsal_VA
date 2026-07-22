@@ -1,51 +1,8 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "all",
+  "defaultGroup": "alto",
   "segments": {
-    "soprano": [
-      {
-        "title": "Part 1 - Kyrie",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "K5AiKgvnRwc",
-        "start": 0
-      },
-      {
-        "title": "Part 2 - Gloria",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "HkClQHm8RIo",
-        "start": 0
-      },
-      {
-        "title": "Part 8 - Credo",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "Q6eXRh0JYOc",
-        "start": 0
-      },
-      {
-        "title": "Parts 9/10",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "tr8cAoQXEq4",
-        "start": 0
-      },
-      {
-        "title": "Part 12 - Sanctus",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "blLPU1NtWSs",
-        "start": 0
-      },
-      {
-        "title": "Part 14 - Agnus Dei",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "l2vNIOybLkw",
-        "start": 0
-      }
-    ],
+    "soprano": [],
     "soprano2": [
       {
         "title": "Part 1 - Kyrie",
@@ -90,50 +47,7 @@
         "start": 0
       }
     ],
-    "alto": [
-      {
-        "title": "Part 1 - Kyrie",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "9j48zA_q3A8",
-        "start": 0
-      },
-      {
-        "title": "Part 2 - Gloria",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "QDqZtjo6IzY",
-        "start": 0
-      },
-      {
-        "title": "Part 8 - Credo",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "VrwxvF7V438",
-        "start": 0
-      },
-      {
-        "title": "Parts 9/10",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "rv6_rFqa6Lk",
-        "start": 0
-      },
-      {
-        "title": "Part 12 - Sanctus",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "DkjfgUdP_pw",
-        "start": 0
-      },
-      {
-        "title": "Part 14 - Agnus Dei",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "vtr-U3QfTq4",
-        "start": 0
-      }
-    ],
+    "alto": [],
     "alto2": [
       {
         "title": "Part 1 - Kyrie",
@@ -406,6 +320,94 @@
         "videoId": "3gRWE-X1ncs",
         "start": 4422
       }
+    ],
+    "sonprano1": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HkClQHm8RIo",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "blLPU1NtWSs",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "l2vNIOybLkw",
+        "start": 0
+      }
+    ],
+    "alto1": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "rv6_rFqa6Lk",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DkjfgUdP_pw",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vtr-U3QfTq4",
+        "start": 0
+      }
     ]
   },
   "groups": [
@@ -452,6 +454,14 @@
     {
       "id": "Tenor1",
       "label": "טנור 1"
+    },
+    {
+      "id": "sonprano1",
+      "label": "סופרן 1"
+    },
+    {
+      "id": "alto1",
+      "label": "אלט 1"
     }
   ]
 }
