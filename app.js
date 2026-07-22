@@ -73,26 +73,50 @@ function renderGroupButtons() {
   container.innerHTML = '';
   secondContainer.innerHTML = '';
   secondContainer.style.display = 'none';
-
-  // מטריצה קבועה: כולם, סופרן, אלט, טנור, בס.
-  // המספר בשם הקול קובע את השורה: קול ראשי בשורה 1,
-  // קול 1 בשורה 2, קול 2 בשורה 3 וכן הלאה.
   container.style.setProperty('--group-columns', 5);
 
-  allGroups.forEach(group => {
-    if (!hasGroupContent(group.id)) {
-      return;
+  // אוספים רק קבוצות שיש להן תוכן ושניתן למקם במטריצה.
+  const positionedGroups = allGroups
+    .filter(group => hasGroupContent(group.id))
+    .map(group => ({
+      group,
+      position: getGroupMatrixPosition(group)
+    }))
+    .filter(item => item.position);
+
+  // שורות הקולות נקבעות לפי המספר בשם הקול.
+  // שורה שאין בה אף קול מוסרת, ולכן לא נשאר רווח אנכי.
+  const voiceRows = [...new Set(
+    positionedGroups
+      .filter(item => item.position.kind === 'voice')
+      .map(item => item.position.logicalRow)
+  )].sort((a, b) => a - b);
+
+  const displayRowByLogicalRow = new Map(
+    voiceRows.map((logicalRow, index) => [logicalRow, index + 1])
+  );
+
+  positionedGroups.forEach(({ group, position }) => {
+    let displayRow;
+
+    if (position.kind === 'voice') {
+      displayRow = displayRowByLogicalRow.get(position.logicalRow);
+    } else if (position.kind === 'all') {
+      // "כולם" תמיד בשורה העליונה המוצגת.
+      displayRow = 1;
+    } else if (position.kind === 'solos') {
+      // "סולנים" תמיד מתחת ל"כולם".
+      displayRow = 2;
     }
 
-    const position = getGroupMatrixPosition(group);
-    if (!position) {
+    if (!displayRow) {
       return;
     }
 
     const btn = document.createElement('button');
     btn.textContent = group.label;
     btn.style.gridColumn = String(position.column);
-    btn.style.gridRow = String(position.row);
+    btn.style.gridRow = String(displayRow);
 
     if (group.id === currentGroup) {
       btn.classList.add('active');
@@ -113,29 +137,6 @@ function renderGroupButtons() {
 
     container.appendChild(btn);
   });
-
-  // אם בשורה הראשונה מופיע רק הכפתור "כולם",
-  // העבר אותו לשורה הראשונה שבה מופיע קול כלשהו.
-  const allButton = [...container.children].find(
-    btn => btn.style.gridColumn === '1'
-  );
-
-  if (allButton) {
-    const firstVoiceRow = [...container.children]
-      .filter(btn => btn.style.gridColumn !== '1')
-      .reduce((minRow, btn) => {
-        const row = Number(btn.style.gridRow);
-        return Number.isFinite(row) ? Math.min(minRow, row) : minRow;
-      }, Infinity);
-
-    if (firstVoiceRow > 1 && firstVoiceRow < Infinity) {
-      allButton.style.gridRow = String(firstVoiceRow);
-    }
-  }
-  const usedRows=[...new Set([...container.children].map(b=>Number(b.style.gridRow)).filter(Number.isFinite))].sort((a,b)=>a-b);
-  const rowMap=new Map();usedRows.forEach((r,i)=>rowMap.set(r,i+1));
-  [...container.children].forEach(b=>b.style.gridRow=String(rowMap.get(Number(b.style.gridRow))));
-
 }
 
 function getGroupMatrixPosition(group) {
@@ -143,10 +144,11 @@ function getGroupMatrixPosition(group) {
   const id = String(group.id || '').trim().toLowerCase();
 
   if (label === 'כולם' || id === 'all') {
-    return { column: 1, row: 1 };
+    return { kind: 'all', column: 1 };
   }
-  if (label === 'סולנים' || id === 'solos') {
-    return { column: 1, row: 2 };
+
+  if (label === 'סולנים' || id === 'solos' || id === 'solo') {
+    return { kind: 'solos', column: 1 };
   }
 
   const voiceDefinitions = [
@@ -179,8 +181,9 @@ function getGroupMatrixPosition(group) {
 
     if (number !== null && Number.isFinite(number)) {
       return {
+        kind: 'voice',
         column: voice.column,
-        row: number + 1
+        logicalRow: number
       };
     }
   }
