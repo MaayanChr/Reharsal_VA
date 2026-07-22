@@ -75,8 +75,7 @@ function renderGroupButtons() {
   secondContainer.style.display = 'none';
   container.style.setProperty('--group-columns', 5);
 
-  // אוספים רק קבוצות שיש להן תוכן ושניתן למקם במטריצה.
-  const positionedGroups = allGroups
+  const visibleGroups = allGroups
     .filter(group => hasGroupContent(group.id))
     .map(group => ({
       group,
@@ -84,39 +83,49 @@ function renderGroupButtons() {
     }))
     .filter(item => item.position);
 
-  // שורות הקולות נקבעות לפי המספר בשם הקול.
-  // שורה שאין בה אף קול מוסרת, ולכן לא נשאר רווח אנכי.
-  const voiceRows = [...new Set(
-    positionedGroups
-      .filter(item => item.position.kind === 'voice')
-      .map(item => item.position.logicalRow)
+  // דוחסים את שורות הקולות הרגילים: שורה שאין בה אף קול אינה תופסת מקום.
+  const regularRanks = [...new Set(
+    visibleGroups
+      .filter(item => item.position.kind === 'regular')
+      .map(item => item.position.rank)
   )].sort((a, b) => a - b);
 
-  const displayRowByLogicalRow = new Map(
-    voiceRows.map((logicalRow, index) => [logicalRow, index + 1])
+  const regularRowByRank = new Map(
+    regularRanks.map((rank, index) => [rank, index + 1])
   );
 
-  positionedGroups.forEach(({ group, position }) => {
-    let displayRow;
+  const hasAll = visibleGroups.some(item => item.position.kind === 'all');
+  const hasSoloRow = visibleGroups.some(item => item.position.kind === 'solo');
 
-    if (position.kind === 'voice') {
-      displayRow = displayRowByLogicalRow.get(position.logicalRow);
-    } else if (position.kind === 'all') {
-      // "כולם" תמיד בשורה העליונה המוצגת.
-      displayRow = 1;
-    } else if (position.kind === 'solos') {
-      // "סולנים" תמיד מתחת ל"כולם".
-      displayRow = 2;
+  // "כולם" מוצג בשורת הקולות הרגילה הראשונה.
+  // כשאין כלל קולות רגילים, הוא נשאר בשורה הראשונה.
+  const allRow = regularRanks.length > 0 ? 1 : 1;
+
+  // שורת הסולנים תמיד אחרונה, לאחר כל שורות הקולות הרגילים.
+  // כשאין קולות רגילים אך יש "כולם", הסולנים עוברים לשורה 2.
+  const soloRow = regularRanks.length > 0
+    ? regularRanks.length + 1
+    : (hasAll ? 2 : 1);
+
+  visibleGroups.forEach(({ group, position }) => {
+    let row;
+
+    if (position.kind === 'all') {
+      row = allRow;
+    } else if (position.kind === 'solo') {
+      row = soloRow;
+    } else {
+      row = regularRowByRank.get(position.rank);
     }
 
-    if (!displayRow) {
+    if (!row) {
       return;
     }
 
     const btn = document.createElement('button');
     btn.textContent = group.label;
     btn.style.gridColumn = String(position.column);
-    btn.style.gridRow = String(displayRow);
+    btn.style.gridRow = String(row);
 
     if (group.id === currentGroup) {
       btn.classList.add('active');
@@ -144,11 +153,28 @@ function getGroupMatrixPosition(group) {
   const id = String(group.id || '').trim().toLowerCase();
 
   if (label === 'כולם' || id === 'all') {
-    return { kind: 'all', column: 1 };
+    return { column: 1, kind: 'all' };
   }
 
-  if (label === 'סולנים' || id === 'solos' || id === 'solo') {
-    return { kind: 'solos', column: 1 };
+  if (label === 'סולנים' || id === 'solos') {
+    return { column: 1, kind: 'solo' };
+  }
+
+  const soloDefinitions = [
+    { column: 2, hebrew: 'סופרן', ids: ['sopsoli', 'sopranosolo', 'sopranosoli'] },
+    { column: 3, hebrew: 'אלט', ids: ['altsoli', 'altosolo', 'altosoli'] },
+    { column: 4, hebrew: 'טנור', ids: ['tensoli', 'tenorsolo', 'tenorsoli'] },
+    { column: 5, hebrew: 'בס', ids: ['basssoli', 'basssolo', 'basssolos'] }
+  ];
+
+  for (const voice of soloDefinitions) {
+    const isSoloLabel = new RegExp(
+      `^${escapeRegExp(voice.hebrew)}\\s+סולו$`
+    ).test(label);
+
+    if (isSoloLabel || voice.ids.includes(id)) {
+      return { column: voice.column, kind: 'solo' };
+    }
   }
 
   const voiceDefinitions = [
@@ -181,9 +207,9 @@ function getGroupMatrixPosition(group) {
 
     if (number !== null && Number.isFinite(number)) {
       return {
-        kind: 'voice',
         column: voice.column,
-        logicalRow: number
+        kind: 'regular',
+        rank: number
       };
     }
   }
