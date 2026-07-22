@@ -113,6 +113,25 @@ function renderGroupButtons() {
 
     container.appendChild(btn);
   });
+
+  // אם בשורה הראשונה מופיע רק הכפתור "כולם",
+  // העבר אותו לשורה הראשונה שבה מופיע קול כלשהו.
+  const allButton = [...container.children].find(
+    btn => btn.style.gridColumn === '1'
+  );
+
+  if (allButton) {
+    const firstVoiceRow = [...container.children]
+      .filter(btn => btn.style.gridColumn !== '1')
+      .reduce((minRow, btn) => {
+        const row = Number(btn.style.gridRow);
+        return Number.isFinite(row) ? Math.min(minRow, row) : minRow;
+      }, Infinity);
+
+    if (firstVoiceRow > 1 && firstVoiceRow < Infinity) {
+      allButton.style.gridRow = String(firstVoiceRow);
+    }
+  }
 }
 
 function getGroupMatrixPosition(group) {
