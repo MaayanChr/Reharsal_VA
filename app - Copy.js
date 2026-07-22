@@ -132,10 +132,6 @@ function renderGroupButtons() {
       allButton.style.gridRow = String(firstVoiceRow);
     }
   }
-  const usedRows=[...new Set([...container.children].map(b=>Number(b.style.gridRow)).filter(Number.isFinite))].sort((a,b)=>a-b);
-  const rowMap=new Map();usedRows.forEach((r,i)=>rowMap.set(r,i+1));
-  [...container.children].forEach(b=>b.style.gridRow=String(rowMap.get(Number(b.style.gridRow))));
-
 }
 
 function getGroupMatrixPosition(group) {
@@ -144,9 +140,6 @@ function getGroupMatrixPosition(group) {
 
   if (label === 'כולם' || id === 'all') {
     return { column: 1, row: 1 };
-  }
-  if (label === 'סולנים' || id === 'solos') {
-    return { column: 1, row: 2 };
   }
 
   const voiceDefinitions = [
