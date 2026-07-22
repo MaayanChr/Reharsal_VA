@@ -123,7 +123,31 @@ function renderGroupButtons() {
     }
 
     const btn = document.createElement('button');
-    btn.textContent = group.label;
+
+    // כפתורי קולות הסולו מוצגים תמיד בשתי שורות קבועות,
+    // ללא תלות ברוחב המסך או בשבירת שורה אוטומטית.
+    if (position.kind === 'solo' && position.column > 1) {
+      const soloVoiceByColumn = {
+        2: 'סופרן',
+        3: 'אלט',
+        4: 'טנור',
+        5: 'בס'
+      };
+
+      const voiceLine = document.createElement('span');
+      voiceLine.textContent = soloVoiceByColumn[position.column] || group.label;
+      voiceLine.style.display = 'block';
+
+      const soloLine = document.createElement('span');
+      soloLine.textContent = 'סולו';
+      soloLine.style.display = 'block';
+
+      btn.appendChild(voiceLine);
+      btn.appendChild(soloLine);
+    } else {
+      btn.textContent = group.label;
+    }
+
     btn.style.gridColumn = String(position.column);
     btn.style.gridRow = String(row);
 
