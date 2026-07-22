@@ -1101,3 +1101,40 @@ button:hover:not(:disabled) {
     text-align: left;
   }
 }
+
+/* מטריצת קולות קבועה וברורה */
+#groupButtons.group-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(38px, auto);
+  align-items: stretch;
+  direction: rtl;
+  gap: 6px;
+}
+
+#groupButtons.group-buttons button {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 38px;
+  padding: 6px 3px;
+  line-height: 1.15;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  writing-mode: horizontal-tb;
+}
+
+@media (max-width: 800px) {
+  #groupButtons.group-buttons {
+    gap: 4px;
+    grid-auto-rows: minmax(34px, auto);
+  }
+
+  #groupButtons.group-buttons button {
+    min-height: 34px;
+    padding: 5px 2px;
+    font-size: 12px;
+  }
+}

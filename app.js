@@ -65,39 +65,34 @@ function onYouTubeIframeAPIReady() {
 function renderGroupButtons() {
   const container = document.getElementById('groupButtons');
   const secondContainer = document.getElementById('groupButtons2');
-  const primaryGroups = libraryData.groups || [];
-  const additionalGroups = libraryData.groups2 || [];
-  const allGroups = [...primaryGroups, ...additionalGroups];
+  const allGroups = [
+    ...(libraryData.groups || []),
+    ...(libraryData.groups2 || [])
+  ];
 
   container.innerHTML = '';
   secondContainer.innerHTML = '';
   secondContainer.style.display = 'none';
 
-  // The first group list defines the fixed matrix columns.
-  // Each numbered variant is placed below its main voice:
-  // soprano, soprano 1, soprano 2, etc.
-  const columns = primaryGroups.map((group, index) => ({
-    id: group.id,
-    label: group.label,
-    column: index + 1
-  }));
-
-  container.style.setProperty('--group-columns', Math.max(columns.length, 1));
+  // מטריצה קבועה: כולם, סופרן, אלט, טנור, בס.
+  // המספר בשם הקול קובע את השורה: קול ראשי בשורה 1,
+  // קול 1 בשורה 2, קול 2 בשורה 3 וכן הלאה.
+  container.style.setProperty('--group-columns', 5);
 
   allGroups.forEach(group => {
     if (!hasGroupContent(group.id)) {
       return;
     }
 
-    const position = getGroupMatrixPosition(group, columns);
+    const position = getGroupMatrixPosition(group);
     if (!position) {
       return;
     }
 
     const btn = document.createElement('button');
     btn.textContent = group.label;
-    btn.style.gridColumn = position.column;
-    btn.style.gridRow = position.row;
+    btn.style.gridColumn = String(position.column);
+    btn.style.gridRow = String(position.row);
 
     if (group.id === currentGroup) {
       btn.classList.add('active');
@@ -120,37 +115,46 @@ function renderGroupButtons() {
   });
 }
 
-function getGroupMatrixPosition(group, columns) {
-  const normalizedId = String(group.id || '').toLowerCase();
-  const normalizedLabel = String(group.label || '').trim();
+function getGroupMatrixPosition(group) {
+  const label = String(group.label || '').trim();
+  const id = String(group.id || '').trim().toLowerCase();
 
-  // Exact matches belong in the first row, including "כולם".
-  const exactColumn = columns.find(column =>
-    String(column.id || '').toLowerCase() === normalizedId
-  );
-
-  if (exactColumn) {
-    return { column: exactColumn.column, row: 1 };
+  if (label === 'כולם' || id === 'all') {
+    return { column: 1, row: 1 };
   }
 
-  // Numbered groups are attached to their main voice column.
-  // Supports ids such as soprano1/soprano2 and labels such as סופרן 1/סופרן 2.
-  for (const column of columns) {
-    const baseId = String(column.id || '').toLowerCase();
-    const baseLabel = String(column.label || '').trim();
+  const voiceDefinitions = [
+    { column: 2, hebrew: 'סופרן', ids: ['soprano', 'sopran', 'sonprano'] },
+    { column: 3, hebrew: 'אלט', ids: ['alto', 'alt'] },
+    { column: 4, hebrew: 'טנור', ids: ['tenor'] },
+    { column: 5, hebrew: 'בס', ids: ['bass', 'base'] }
+  ];
 
-    const idMatch = normalizedId.match(
-      new RegExp(`^${escapeRegExp(baseId)}[\\s._-]*(\\d+)$`)
+  for (const voice of voiceDefinitions) {
+    const labelMatch = label.match(
+      new RegExp(`^${escapeRegExp(voice.hebrew)}(?:\\s*(\\d+))?$`)
     );
-    const labelMatch = normalizedLabel.match(
-      new RegExp(`^${escapeRegExp(baseLabel)}[\\s._-]*(\\d+)$`)
-    );
-    const match = idMatch || labelMatch;
 
-    if (match) {
+    let number = null;
+
+    if (labelMatch) {
+      number = labelMatch[1] ? Number(labelMatch[1]) : 0;
+    } else {
+      for (const baseId of voice.ids) {
+        const idMatch = id.match(
+          new RegExp(`^${escapeRegExp(baseId)}[\\s._-]*(\\d*)$`)
+        );
+        if (idMatch) {
+          number = idMatch[1] ? Number(idMatch[1]) : 0;
+          break;
+        }
+      }
+    }
+
+    if (number !== null && Number.isFinite(number)) {
       return {
-        column: column.column,
-        row: Number(match[1]) + 1
+        column: voice.column,
+        row: number + 1
       };
     }
   }
