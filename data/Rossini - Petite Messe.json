@@ -1,0 +1,457 @@
+{
+  "libraryTitle": "Rossini - Petite Messe Solennelle",
+  "defaultGroup": "all",
+  "segments": {
+    "soprano": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HkClQHm8RIo",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "blLPU1NtWSs",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "l2vNIOybLkw",
+        "start": 0
+      }
+    ],
+    "soprano2": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HkClQHm8RIo",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vgk03Mm4OXo",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "blLPU1NtWSs",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "l2vNIOybLkw",
+        "start": 0
+      }
+    ],
+    "alto": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "rv6_rFqa6Lk",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DkjfgUdP_pw",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vtr-U3QfTq4",
+        "start": 0
+      }
+    ],
+    "alto2": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "rv6_rFqa6Lk",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DkjfgUdP_pw",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vtr-U3QfTq4",
+        "start": 0
+      }
+    ],
+    "tenor": [],
+    "tenor2": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pFT9l4IIol4",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_x4TmzvbkWc",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mc82DiJe_4g",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "p7XRYDfVq24",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "p7XRYDfVq24",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "t07JD19jvhQ",
+        "start": 0
+      }
+    ],
+    "bass": [],
+    "Base1": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DEFwFnh3Lhk",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vzhMdeTWqeQ",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "720qatnyg60",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "IafkRi9A4bE",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "IafkRi9A4bE",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K3KHdG3rrU0",
+        "start": 0
+      }
+    ],
+    "bass2": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ZOcAfxxcbls",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VBNmKZXy-tI",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Klp_ENXSIGs",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Is1meU1KuE4",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DHngycvlxkg",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VmJ4-JJxejM",
+        "start": 0
+      }
+    ],
+    "Tenor1": [
+      {
+        "title": "Part 1 - Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "rFRG2KzZsNo",
+        "start": 0
+      },
+      {
+        "title": "Part 2 - Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sq2UE40UQu8",
+        "start": 0
+      },
+      {
+        "title": "Part 8 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "kEhM2jj1hH8",
+        "start": 0
+      },
+      {
+        "title": "Parts 9/10",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "MtYZzQ3HvWM",
+        "start": 0
+      },
+      {
+        "title": "Part 12 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "osqRptIft-c",
+        "start": 0
+      },
+      {
+        "title": "Part 14 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K7dL-ELN36k",
+        "start": 0
+      }
+    ],
+    "all": [
+      {
+        "title": "1. Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 0
+      },
+      {
+        "title": "2. Gloria in excelsis Deo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 399
+      },
+      {
+        "title": "3. Credo in unum Deum",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 2366
+      },
+      {
+        "title": "4. Offertorium",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 3413
+      },
+      {
+        "title": "5. Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 3892
+      },
+      {
+        "title": "6. salutarias hostia",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 4095
+      },
+      {
+        "title": "7. Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 4422
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    },
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    },
+    {
+      "id": "Base1",
+      "label": "בס 1"
+    },
+    {
+      "id": "Tenor1",
+      "label": "טנור 1"
+    }
+  ]
+}
