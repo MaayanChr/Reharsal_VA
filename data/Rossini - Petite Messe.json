@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "solos",
+  "defaultGroup": "bass2",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -12,11 +12,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "HkClQHm8RIo",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HkClQHm8RIo",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HkClQHm8RIo",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "HkClQHm8RIo",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -64,11 +99,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "QDqZtjo6IzY",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -116,11 +186,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pFT9l4IIol4",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pFT9l4IIol4",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "_x4TmzvbkWc",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_x4TmzvbkWc",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_x4TmzvbkWc",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_x4TmzvbkWc",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -168,11 +273,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DEFwFnh3Lhk",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DEFwFnh3Lhk",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "vzhMdeTWqeQ",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vzhMdeTWqeQ",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vzhMdeTWqeQ",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vzhMdeTWqeQ",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -219,11 +359,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ZOcAfxxcbls",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ZOcAfxxcbls",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "VBNmKZXy-tI",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VBNmKZXy-tI",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VBNmKZXy-tI",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VBNmKZXy-tI",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -270,11 +445,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "K5AiKgvnRwc",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "Sq2UE40UQu8",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sq2UE40UQu8",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sq2UE40UQu8",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Sq2UE40UQu8",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -411,7 +621,7 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "HkClQHm8RIo",
-        "start": 129
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
@@ -458,11 +668,46 @@
         "start": 0
       },
       {
+        "title": "1.1 - Kyrie [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 38
+      },
+      {
+        "title": "1.2 - Kyrie [bar 36]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9j48zA_q3A8",
+        "start": 158
+      },
+      {
         "title": "2.0 - Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "QDqZtjo6IzY",
         "start": 0
+      },
+      {
+        "title": "2.1 - Gloria [bar 9]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 23
+      },
+      {
+        "title": "2.2 - Gloria - Solos [bar 27]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 57
+      },
+      {
+        "title": "2.3 - Gloria  [bar 69]",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "QDqZtjo6IzY",
+        "start": 127
       },
       {
         "title": "8.0 - Credo",
