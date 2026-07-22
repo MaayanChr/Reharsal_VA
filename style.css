@@ -87,7 +87,7 @@ h2, h3 {
 
 .group-buttons {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(var(--group-columns, 5), minmax(0, 1fr));
   gap: 6px;
   margin-bottom: 14px;
 }
@@ -157,7 +157,7 @@ button:hover:not(:disabled) {
   }
 
   .group-buttons {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(var(--group-columns, 5), minmax(0, 1fr));
     gap: 4px;
   }
 

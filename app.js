@@ -63,39 +63,47 @@ function onYouTubeIframeAPIReady() {
 }
 
 function renderGroupButtons() {
-  renderGroupRow('groupButtons', libraryData.groups || [], false);
-  renderGroupRow('groupButtons2', libraryData.groups2 || [], true);
-}
+  const container = document.getElementById('groupButtons');
+  const secondContainer = document.getElementById('groupButtons2');
+  const primaryGroups = libraryData.groups || [];
+  const additionalGroups = libraryData.groups2 || [];
+  const allGroups = [...primaryGroups, ...additionalGroups];
 
-function renderGroupRow(containerId, groups, hideIfAllEmpty) {
-  const container = document.getElementById(containerId);
   container.innerHTML = '';
+  secondContainer.innerHTML = '';
+  secondContainer.style.display = 'none';
 
-  const hasAnyContent = groups.some(group => hasGroupContent(group.id));
+  // The first group list defines the fixed matrix columns.
+  // Each numbered variant is placed below its main voice:
+  // soprano, soprano 1, soprano 2, etc.
+  const columns = primaryGroups.map((group, index) => ({
+    id: group.id,
+    label: group.label,
+    column: index + 1
+  }));
 
-  if (hideIfAllEmpty && !hasAnyContent) {
-    container.style.display = 'none';
-    return;
-  }
+  container.style.setProperty('--group-columns', Math.max(columns.length, 1));
 
-  container.style.display = '';
+  allGroups.forEach(group => {
+    if (!hasGroupContent(group.id)) {
+      return;
+    }
 
-  groups.forEach(group => {
+    const position = getGroupMatrixPosition(group, columns);
+    if (!position) {
+      return;
+    }
+
     const btn = document.createElement('button');
     btn.textContent = group.label;
-
-    const hasContent = hasGroupContent(group.id);
-    btn.disabled = !hasContent;
+    btn.style.gridColumn = position.column;
+    btn.style.gridRow = position.row;
 
     if (group.id === currentGroup) {
       btn.classList.add('active');
     }
 
     btn.onclick = function () {
-      if (!hasContent) {
-        return;
-      }
-
       currentGroup = group.id;
       currentSegment = null;
       clearPlayer();
@@ -110,6 +118,48 @@ function renderGroupRow(containerId, groups, hideIfAllEmpty) {
 
     container.appendChild(btn);
   });
+}
+
+function getGroupMatrixPosition(group, columns) {
+  const normalizedId = String(group.id || '').toLowerCase();
+  const normalizedLabel = String(group.label || '').trim();
+
+  // Exact matches belong in the first row, including "כולם".
+  const exactColumn = columns.find(column =>
+    String(column.id || '').toLowerCase() === normalizedId
+  );
+
+  if (exactColumn) {
+    return { column: exactColumn.column, row: 1 };
+  }
+
+  // Numbered groups are attached to their main voice column.
+  // Supports ids such as soprano1/soprano2 and labels such as סופרן 1/סופרן 2.
+  for (const column of columns) {
+    const baseId = String(column.id || '').toLowerCase();
+    const baseLabel = String(column.label || '').trim();
+
+    const idMatch = normalizedId.match(
+      new RegExp(`^${escapeRegExp(baseId)}[\\s._-]*(\\d+)$`)
+    );
+    const labelMatch = normalizedLabel.match(
+      new RegExp(`^${escapeRegExp(baseLabel)}[\\s._-]*(\\d+)$`)
+    );
+    const match = idMatch || labelMatch;
+
+    if (match) {
+      return {
+        column: column.column,
+        row: Number(match[1]) + 1
+      };
+    }
+  }
+
+  return null;
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function hasGroupContent(groupId) {
