@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "BassSoli",
+  "defaultGroup": "all",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -538,35 +538,70 @@
         "start": 399
       },
       {
-        "title": "3. Credo in unum Deum",
+        "title": "3. Gratias agimus tibi (solos)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 556
+      },
+      {
+        "title": "4. Domine Deus (T solo)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 826
+      },
+      {
+        "title": "5. Qui tollis (S+A solo)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 1189
+      },
+      {
+        "title": "6. Quoniam (B solo)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 1189
+      },
+      {
+        "title": "7. Cum Sancto Spiritu",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3gRWE-X1ncs",
+        "start": 1981
+      },
+      {
+        "title": "8. Credo in unum Deum",
         "source": "youtube",
         "ltr": true,
         "videoId": "3gRWE-X1ncs",
         "start": 2366
       },
       {
-        "title": "4. Offertorium",
+        "title": "9. Offertorium",
         "source": "youtube",
         "ltr": true,
         "videoId": "3gRWE-X1ncs",
         "start": 3413
       },
       {
-        "title": "5. Sanctus",
+        "title": "10. Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "3gRWE-X1ncs",
         "start": 3892
       },
       {
-        "title": "6. salutarias hostia",
+        "title": "11. salutarias hostia",
         "source": "youtube",
         "ltr": true,
         "videoId": "3gRWE-X1ncs",
         "start": 4095
       },
       {
-        "title": "7. Agnus Dei",
+        "title": "12. Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "3gRWE-X1ncs",
