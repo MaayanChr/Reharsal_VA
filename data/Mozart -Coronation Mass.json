@@ -1,0 +1,247 @@
+{
+  "libraryTitle": "Mozart - Coronation Mass",
+  "defaultGroup": "bass",
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "sonprano1",
+      "label": "סופרן 1"
+    },
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "alto1",
+      "label": "אלט 1"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "Tenor1",
+      "label": "טנור 1"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "Base1",
+      "label": "בס 1"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    },
+    {
+      "id": "solos",
+      "label": "סולנים"
+    },
+    {
+      "id": "SopSoli",
+      "label": "סופרן סולו"
+    },
+    {
+      "id": "AltSoli",
+      "label": "אלט סולו"
+    },
+    {
+      "id": "TenSoli",
+      "label": "טנור סולו"
+    },
+    {
+      "id": "BassSoli",
+      "label": "בס סולו"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ],
+  "segments": {
+    "soprano": [
+      {
+        "title": "1- Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 0
+      },
+      {
+        "title": "2- Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 116
+      },
+      {
+        "title": "3 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 392
+      },
+      {
+        "title": "4 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 717
+      },
+      {
+        "title": "5 - Benedictus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 827
+      },
+      {
+        "title": "6 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 1010
+      }
+    ],
+    "alto": [
+      {
+        "title": "1- KYRIE",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 0
+      },
+      {
+        "title": "2- GLORIA",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 114
+      },
+      {
+        "title": "3 - CREDO",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 381
+      },
+      {
+        "title": "4 - SANCTUS",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 712
+      }
+    ],
+    "tenor": [
+      {
+        "title": "1- KYRIE",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 0
+      },
+      {
+        "title": "2- GLORIA",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 116
+      },
+      {
+        "title": "3 - CREDO",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 381
+      },
+      {
+        "title": "4 - SANCTUS",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 712
+      },
+      {
+        "title": "5 - Benedictus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 801
+      },
+      {
+        "title": "6 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 981
+      }
+    ],
+    "bass": [
+      {
+        "title": "1- Kyrie",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 0
+      },
+      {
+        "title": "2- Gloria",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 116
+      },
+      {
+        "title": "3 - Credo",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 392
+      },
+      {
+        "title": "4 - Sanctus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 711
+      },
+      {
+        "title": "5 - Benedictus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 801
+      },
+      {
+        "title": "6 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 1010
+      }
+    ],
+    "all": [],
+    "soprano2": [],
+    "alto2": [],
+    "tenor2": [],
+    "bass2": []
+  }
+}
