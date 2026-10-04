@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "bass2",
+  "defaultGroup": "all",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -448,14 +448,14 @@
         "title": "1.1 - Kyrie [bar 9]",
         "source": "youtube",
         "ltr": true,
-        "videoId": "rFRG2KzZsNo",
+        "videoId": "K5AiKgvnRwc",
         "start": 38
       },
       {
         "title": "1.2 - Kyrie [bar 36]",
         "source": "youtube",
         "ltr": true,
-        "videoId": "rFRG2KzZsNo",
+        "videoId": "K5AiKgvnRwc",
         "start": 158
       },
       {
@@ -563,7 +563,7 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "3gRWE-X1ncs",
-        "start": 1565
+        "start": 1564
       },
       {
         "title": "7. Cum Sancto Spiritu",
