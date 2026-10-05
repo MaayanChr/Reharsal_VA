@@ -10,6 +10,8 @@ let advancingAfterEnded = false;
 let audioVisualizerAnimationId = null;
 let audioWaveformData = null;
 let audioVisualizerMedia = null;
+const DEFAULT_PLAYBACK_RATE = 1.0;
+let currentPlaybackRate = DEFAULT_PLAYBACK_RATE;
 
 
 function getDataFileName() {
@@ -25,7 +27,7 @@ function getDataFileName() {
 
 async function loadLibraryData() {
   const fileName = getDataFileName();
-  const url = `data/${fileName}`;
+  const url = `data/${fileName}?v=${Date.now()}`;
 
   try {
     const response = await fetch(url);
@@ -50,6 +52,7 @@ async function loadLibraryData() {
     createSkipButtons();
     startSkipButtonsUpdater();
     setupPlaybackOptions();
+    setupPlaybackSpeed();
 
   } catch (error) {
     document.getElementById('currentTitle').innerHTML =
@@ -344,7 +347,13 @@ function applyTextDirection(element, segment) {
 }
 
 function loadSegment(segment, autoplay) {
+  const isDifferentSegment = currentSegment !== segment;
   currentSegment = segment;
+
+  if (isDifferentSegment) {
+    resetPlaybackSpeed();
+  }
+
   renderSegmentButtons();
   const currentTitle = document.getElementById('currentTitle');
 
@@ -427,6 +436,7 @@ function loadYouTubeSegment(segment, autoplay) {
         autoplay: autoplay ? 1 : 0
       },
       events: {
+        onReady: () => applyPlaybackSpeed(),
         onStateChange: onYouTubePlayerStateChange
       }
     });
@@ -435,6 +445,7 @@ function loadYouTubeSegment(segment, autoplay) {
       videoId: videoId,
       startSeconds: startSeconds
     });
+    setTimeout(() => applyPlaybackSpeed(), 0);
   }
 
   currentMode = 'youtube';
@@ -453,6 +464,7 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
   media.id = 'htmlVideo';
   media.controls = true;
   media.src = mediaUrl;
+  media.playbackRate = currentPlaybackRate;
 
   if (mediaType === 'audio') {
     media.className = 'audio-player';
@@ -655,6 +667,79 @@ function setupPlaybackOptions() {
   }
 }
 
+function formatPlaybackRate(rate) {
+  const numericRate = Number(rate);
+
+  if (Number.isInteger(numericRate)) {
+    return numericRate.toFixed(1);
+  }
+
+  return String(numericRate);
+}
+
+function updatePlaybackSpeedDisplay() {
+  const slider = document.getElementById('playbackSpeedRange');
+  const value = document.getElementById('playbackSpeedValue');
+
+  if (slider) {
+    slider.value = String(currentPlaybackRate);
+  }
+
+  if (value) {
+    value.textContent = `${formatPlaybackRate(currentPlaybackRate)}×`;
+  }
+}
+
+function applyPlaybackSpeed() {
+  if (
+    currentMode === 'youtube' &&
+    player &&
+    typeof player.setPlaybackRate === 'function'
+  ) {
+    player.setPlaybackRate(currentPlaybackRate);
+  }
+
+  if (currentMode === 'html') {
+    const media = document.getElementById('htmlVideo');
+
+    if (media) {
+      media.playbackRate = currentPlaybackRate;
+    }
+  }
+}
+
+function setPlaybackSpeed(rate) {
+  const parsed = Number(rate);
+
+  if (!Number.isFinite(parsed)) {
+    return;
+  }
+
+  currentPlaybackRate = Math.min(2.0, Math.max(0.5, parsed));
+  updatePlaybackSpeedDisplay();
+  applyPlaybackSpeed();
+}
+
+function resetPlaybackSpeed() {
+  currentPlaybackRate = DEFAULT_PLAYBACK_RATE;
+  updatePlaybackSpeedDisplay();
+  applyPlaybackSpeed();
+}
+
+function setupPlaybackSpeed() {
+  const slider = document.getElementById('playbackSpeedRange');
+
+  currentPlaybackRate = DEFAULT_PLAYBACK_RATE;
+  updatePlaybackSpeedDisplay();
+
+  if (!slider) {
+    return;
+  }
+
+  slider.addEventListener('input', () => {
+    setPlaybackSpeed(slider.value);
+  });
+}
 function isPlayAllEnabled() {
   const checkbox = document.getElementById('playAllCheckbox');
   return !!(checkbox && checkbox.checked);

@@ -83,6 +83,17 @@
               <input type="checkbox" id="repeatSegmentCheckbox">
               חזור על הקטע
             </label>
+            <label class="playback-speed-control" for="playbackSpeedRange">
+              <span>מהירות</span>
+              <input
+                type="range"
+                id="playbackSpeedRange"
+                min="0.5"
+                max="2"
+                step="0.25"
+                value="1">
+              <span id="playbackSpeedValue" class="playback-speed-value">1.0×</span>
+            </label>
           </div>
 
           <button id="openFullBtn" type="button">
