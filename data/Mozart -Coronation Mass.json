@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Coronation Mass",
-  "defaultGroup": "soprano",
+  "defaultGroup": "tenor",
   "groups": [
     {
       "id": "soprano",
@@ -222,14 +222,14 @@
     ],
     "tenor": [
       {
-        "title": "1- KYRIE",
+        "title": "1- Kyrie",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 0
       },
       {
-        "title": "2- GLORIA",
+        "title": "2- Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
