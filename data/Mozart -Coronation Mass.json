@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Coronation Mass",
-  "defaultGroup": "tenor",
+  "defaultGroup": "bass",
   "groups": [
     {
       "id": "soprano",
@@ -96,7 +96,35 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 392
+        "start": 381
+      },
+      {
+        "title": "3.1 - Credo (bar 18)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 416
+      },
+      {
+        "title": "3.2 - Credo (bar 36)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 452
+      },
+      {
+        "title": "3.3 - Credo (bar 65)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 519
+      },
+      {
+        "title": "3.4 - Credo (bar 114)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 632
       },
       {
         "title": "4 - Sanctus",
@@ -143,11 +171,53 @@
         "start": 381
       },
       {
+        "title": "3.1 - Credo (bar 18)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 416
+      },
+      {
+        "title": "3.2 - Credo (bar 36)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 452
+      },
+      {
+        "title": "3.3 - Credo (bar 65)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 519
+      },
+      {
+        "title": "3.4 - Credo (bar 114)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 632
+      },
+      {
         "title": "4 - SANCTUS",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
         "start": 712
+      },
+      {
+        "title": "5 - Benedictus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 827
+      },
+      {
+        "title": "6 - Agnus Dei",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 1010
       }
     ],
     "tenor": [
@@ -177,7 +247,7 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 418
+        "start": 417
       },
       {
         "title": "3.2 - CREDO (bar 36)",
@@ -245,6 +315,34 @@
         "start": 392
       },
       {
+        "title": "3.1 - Credo (bar 18)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 416
+      },
+      {
+        "title": "3.2 - Credo (bar 36)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 452
+      },
+      {
+        "title": "3.3 - Credo (bar 65)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 519
+      },
+      {
+        "title": "3.4 - Credo (bar 114)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 632
+      },
+      {
         "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
@@ -270,6 +368,7 @@
     "soprano2": [],
     "alto2": [],
     "tenor2": [],
-    "bass2": []
+    "bass2": [],
+    "sonprano1": []
   }
 }
