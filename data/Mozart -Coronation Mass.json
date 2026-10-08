@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Coronation Mass",
-  "defaultGroup": "bass",
+  "defaultGroup": "soprano",
   "groups": [
     {
       "id": "soprano",
@@ -150,21 +150,21 @@
     ],
     "alto": [
       {
-        "title": "1- KYRIE",
+        "title": "1- Kyrie",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
         "start": 0
       },
       {
-        "title": "2- GLORIA",
+        "title": "2- Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
         "start": 114
       },
       {
-        "title": "3 - CREDO",
+        "title": "3 - Credo",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
@@ -199,7 +199,7 @@
         "start": 632
       },
       {
-        "title": "4 - SANCTUS",
+        "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
@@ -236,42 +236,42 @@
         "start": 116
       },
       {
-        "title": "3 - CREDO",
+        "title": "3 - Credo",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 381
       },
       {
-        "title": "3.1 - CREDO (bar 18)",
+        "title": "3.1 - Credo (bar 18)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 417
       },
       {
-        "title": "3.2 - CREDO (bar 36)",
+        "title": "3.2 - Credo (bar 36)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 452
       },
       {
-        "title": "3.3 - CREDO (bar 65)",
+        "title": "3.3 - Credo (bar 65)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 519
       },
       {
-        "title": "3.4 - CREDO (bar 114)",
+        "title": "3.4 - Credo (bar 114)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 632
       },
       {
-        "title": "4 - SANCTUS",
+        "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
