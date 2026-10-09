@@ -17,15 +17,24 @@ const DEFAULT_PLAYBACK_RATE = 1.0;
 let currentPlaybackRate = DEFAULT_PLAYBACK_RATE;
 
 
+function normalizeWorkName(value) {
+  if (typeof value !== 'string') return null;
+  let name = value.trim();
+  if (name.toLowerCase().endsWith('.json')) name = name.slice(0, -5);
+  // Keep Unicode names (including Hebrew); reject directories and traversal.
+  if (!name || name === '.' || name === '..' || name.includes('/') ||
+      name.includes('\\') || /[\x00-\x1f\x7f]/.test(name)) return null;
+  return name;
+}
+
 function getInitialWorkName() {
-  const name = new URLSearchParams(window.location.search).get('data') || 'choir-example';
-  return /^[\w\-]+$/.test(name) ? name : 'choir-example';
+  const name = new URLSearchParams(window.location.search).get('data');
+  return normalizeWorkName(name) || 'choir-example';
 }
 
 function workFileUrl(name) {
-  // Only simple filenames, never arbitrary paths.
-  if (!/^[\w\-]+$/.test(name)) return null;
-  return `data/${encodeURIComponent(name)}.json?v=${Date.now()}`;
+  const validName = normalizeWorkName(name);
+  return validName ? `data/${encodeURIComponent(validName)}.json?v=${Date.now()}` : null;
 }
 
 async function setupWorkSelector() {
@@ -40,7 +49,8 @@ async function setupWorkSelector() {
       if (Array.isArray(entries)) {
         works = entries.map(item => typeof item === 'string'
           ? {id: item, title: item} : {id: item.id, title: item.title || item.id})
-          .filter(item => typeof item.id === 'string' && /^[\w\-]+$/.test(item.id));
+          .map(item => ({id: normalizeWorkName(item.id), title: item.title}))
+          .filter(item => item.id !== null);
       }
     }
   } catch (err) {
@@ -59,7 +69,13 @@ async function setupWorkSelector() {
   select.value = initial;
   select.addEventListener('change', async () => {
     const previous = activeWorkName;
-    if (!await loadLibraryData(select.value)) select.value = previous || initial;
+    if (!await loadLibraryData(select.value)) {
+      select.value = previous || initial;
+    } else {
+      const url = new URL(window.location.href);
+      url.searchParams.set('data', select.value);
+      window.history.replaceState(null, '', url);
+    }
   });
   await loadLibraryData(initial);
 }

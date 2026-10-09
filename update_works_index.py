@@ -5,9 +5,7 @@ folder = Path(__file__).resolve().parent / 'data'
 works = []
 for file in sorted(folder.glob('*.json')):
     if file.name == 'works.json': continue
-    if not all(ch.isascii() and (ch.isalnum() or ch in '_-') for ch in file.stem):
-        print('Skipped filename (use ASCII letters/numbers/-/_):', file.name)
-        continue
+    # Unicode filenames, including Hebrew, are supported.
     try:
         data = json.loads(file.read_text(encoding='utf-8-sig'))
         if not isinstance(data.get('segments'), dict): continue
