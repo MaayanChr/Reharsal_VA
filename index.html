@@ -19,8 +19,11 @@
     display:flex; align-items:center; gap:12px; padding:12px 14px;
     background:#fffaf0; border:1px solid #dfc77e; border-radius:8px;
     box-shadow:0 3px 12px rgba(0,0,0,.2); color:#303030;
-    font:14px/1.5 Arial,sans-serif; text-align:right; direction:rtl;
+    font:18px/1.45 Arial,sans-serif; text-align:right; direction:rtl;
   }
+  #premiumNoticeText { display:flex; flex-direction:column; }
+  #premiumNoticeText span { display:block; }
+  @media (max-width:600px) { #premiumNotice {font-size:16px; padding:10px;} }
   #premiumNoticeClose { flex:0 0 auto; border:0; background:transparent; color:#444; font-size:25px; line-height:1; cursor:pointer; padding:0 3px; }
   #premiumNoticeClose:focus-visible {outline:2px solid #24589b; outline-offset:2px;}
 </style>
@@ -29,7 +32,7 @@
 <body>
 
 <div id="premiumNotice" class="premium-notice" role="status" aria-live="polite">
-    <span>אם יש לך מנוי YouTube Premium, מומלץ לוודא שחשבון YouTube שלך מחובר גם בדפדפן שבו פועל הנגן, ולא רק באפליקציית YouTube. הדבר עשוי למנוע הופעת פרסומות.</span>
+    <span id="premiumNoticeText"><span>יש לך YouTube Premium? התחבר גם בדפדפן של הנגן.</span><span>חיבור באפליקציית YouTube בלבד לא תמיד מספיק.</span></span>
     <button id="premiumNoticeClose" type="button" aria-label="סגור הודעה" title="סגור">×</button>
 </div>
 
