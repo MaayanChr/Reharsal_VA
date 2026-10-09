@@ -10,14 +10,40 @@
 
     <link rel="stylesheet"
           href="style.css">
+
+<style>
+  #premiumNotice[hidden] { display:none !important; }
+  #premiumNotice {
+    position:fixed; z-index:99999; top:12px; left:50%; transform:translateX(-50%);
+    width:max-content; max-width:calc(100vw - 24px); box-sizing:border-box;
+    display:flex; align-items:center; gap:12px; padding:12px 14px;
+    background:#fffaf0; border:1px solid #dfc77e; border-radius:8px;
+    box-shadow:0 3px 12px rgba(0,0,0,.2); color:#303030;
+    font:14px/1.5 Arial,sans-serif; text-align:right; direction:rtl;
+  }
+  #premiumNoticeClose { flex:0 0 auto; border:0; background:transparent; color:#444; font-size:25px; line-height:1; cursor:pointer; padding:0 3px; }
+  #premiumNoticeClose:focus-visible {outline:2px solid #24589b; outline-offset:2px;}
+</style>
 </head>
 
 <body>
 
-<div id="premiumNotice" class="premium-notice" role="status" aria-live="polite" hidden>
+<div id="premiumNotice" class="premium-notice" role="status" aria-live="polite">
     <span>אם יש לך מנוי YouTube Premium, מומלץ לוודא שחשבון YouTube שלך מחובר גם בדפדפן שבו פועל הנגן, ולא רק באפליקציית YouTube. הדבר עשוי למנוע הופעת פרסומות.</span>
     <button id="premiumNoticeClose" type="button" aria-label="סגור הודעה" title="סגור">×</button>
 </div>
+
+<script>
+(function () {
+  var notice = document.getElementById('premiumNotice');
+  var close = document.getElementById('premiumNoticeClose');
+  if (!notice || !close) return;
+  notice.hidden = false;
+  function dismiss() { notice.hidden = true; }
+  close.addEventListener('click', dismiss);
+  window.setTimeout(dismiss, 10000);
+})();
+</script>
 
 <div class="container">
 
