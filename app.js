@@ -7,6 +7,9 @@ const SKIP_VALUES = [-30, -15, -10, -5, -1, 1, 5, 10, 15, 30];
 let skipButtonsTimer = null;
 let currentSegment = null;
 let advancingAfterEnded = false;
+let segmentEndHandled = false;
+let libraryLoadSequence = 0;
+let activeWorkName = null;
 let audioVisualizerAnimationId = null;
 let audioWaveformData = null;
 let audioVisualizerMedia = null;
@@ -14,38 +17,76 @@ const DEFAULT_PLAYBACK_RATE = 1.0;
 let currentPlaybackRate = DEFAULT_PLAYBACK_RATE;
 
 
-function getDataFileName() {
-  const params = new URLSearchParams(window.location.search);
-  const dataName = params.get('data') || 'choir-example';
-
-  if (dataName.includes('/') || dataName.includes('\\') || dataName.includes('..')) {
-    return 'choir-example.json';
-  }
-
-  return `${dataName}.json`;
+function getInitialWorkName() {
+  const name = new URLSearchParams(window.location.search).get('data') || 'choir-example';
+  return /^[\w\-]+$/.test(name) ? name : 'choir-example';
 }
 
-async function loadLibraryData() {
-  const fileName = getDataFileName();
-  const url = `data/${fileName}?v=${Date.now()}`;
+function workFileUrl(name) {
+  // Only simple filenames, never arbitrary paths.
+  if (!/^[\w\-]+$/.test(name)) return null;
+  return `data/${encodeURIComponent(name)}.json?v=${Date.now()}`;
+}
 
+async function setupWorkSelector() {
+  const select = document.getElementById('workSelector');
+  const initial = getInitialWorkName();
+  let works = [];
+  try {
+    const response = await fetch(`data/works.json?v=${Date.now()}`);
+    if (response.ok) {
+      const manifest = await response.json();
+      const entries = Array.isArray(manifest) ? manifest : manifest.works;
+      if (Array.isArray(entries)) {
+        works = entries.map(item => typeof item === 'string'
+          ? {id: item, title: item} : {id: item.id, title: item.title || item.id})
+          .filter(item => typeof item.id === 'string' && /^[\w\-]+$/.test(item.id));
+      }
+    }
+  } catch (err) {
+    console.info('Works index unavailable; single-work fallback.', err);
+  }
+  if (!works.some(work => work.id === initial)) {
+    works.unshift({id: initial, title: initial});
+  }
+  select.replaceChildren();
+  for (const work of works) {
+    const option = document.createElement('option');
+    option.value = work.id;
+    option.textContent = work.title;
+    select.appendChild(option);
+  }
+  select.value = initial;
+  select.addEventListener('change', async () => {
+    const previous = activeWorkName;
+    if (!await loadLibraryData(select.value)) select.value = previous || initial;
+  });
+  await loadLibraryData(initial);
+}
+
+async function loadLibraryData(name = getInitialWorkName()) {
+  const url = workFileUrl(name);
+  if (!url) return false;
+  const requestNumber = ++libraryLoadSequence;
   try {
     const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`Cannot load ${url}`);
+    if (!response.ok) throw new Error(`Cannot load ${url}`);
+    const loaded = await response.json();
+    if (requestNumber !== libraryLoadSequence) return false;
+    if (!loaded || !loaded.segments || !Array.isArray(loaded.groups)) {
+      throw new Error('Invalid library structure');
     }
-
-    libraryData = await response.json();
-    currentGroup = null;
-
-    document.getElementById('libraryTitle').textContent =
-      libraryData.libraryTitle || 'ספריית וידאו';
-
-    document.getElementById('currentTitle').textContent =
-      'בחר קול ולאחר מכן בחר קטע';
-
     clearPlayer();
+    currentSegment = null;
+    segmentEndHandled = false;
+    libraryData = loaded;
+    activeWorkName = name;
+    currentGroup = null;
+    document.getElementById('libraryTitle').textContent = loaded.libraryTitle || 'ספריית וידאו';
+    document.getElementById('currentTitle').textContent = 'בחר קול ולאחר מכן בחר קטע';
+    // Reflect the actual title from the JSON, even if the index is stale.
+    const option = [...document.getElementById('workSelector').options].find(o => o.value === name);
+    if (option) option.textContent = loaded.libraryTitle || option.textContent;
     renderGroupButtons();
     renderSegmentButtons();
     initMobileMode();
@@ -53,11 +94,13 @@ async function loadLibraryData() {
     startSkipButtonsUpdater();
     setupPlaybackOptions();
     setupPlaybackSpeed();
-
+    return true;
   } catch (error) {
-    document.getElementById('currentTitle').innerHTML =
-      `<span class="error">שגיאה בטעינת קובץ הנתונים: ${url}</span>`;
-    console.error(error);
+    if (requestNumber === libraryLoadSequence) {
+      document.getElementById('currentTitle').textContent = `שגיאה בטעינת קובץ הנתונים: ${url}`;
+      console.error(error);
+    }
+    return false;
   }
 }
 
@@ -349,6 +392,7 @@ function applyTextDirection(element, segment) {
 function loadSegment(segment, autoplay) {
   const isDifferentSegment = currentSegment !== segment;
   currentSegment = segment;
+  segmentEndHandled = false;
 
   if (isDifferentSegment) {
     resetPlaybackSpeed();
@@ -482,7 +526,7 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
     updateSkipButtons();
   });
 
-  media.addEventListener('timeupdate', updateSkipButtons);
+  media.addEventListener('timeupdate', () => { updateSkipButtons(); checkSegmentEnd(); });
   media.addEventListener('ended', handleSegmentEnded);
 
   wrapper.appendChild(media);
@@ -763,6 +807,34 @@ function getCurrentSegmentIndex() {
   return segments.indexOf(currentSegment);
 }
 
+// `end` is an absolute position in seconds. -1 or absent means no explicit stop.
+// Older JSON files remain valid and retain full-media playback.
+function getConfiguredSegmentEnd() {
+  if (!currentSegment || currentSegment.end === undefined || currentSegment.end === null || currentSegment.end === '') return null;
+  const end = Number(currentSegment.end);
+  const start = Number(currentSegment.start) || 0;
+  return Number.isFinite(end) && end > start ? end : null;
+}
+
+function checkSegmentEnd() {
+  if (!currentSegment || segmentEndHandled || advancingAfterEnded) return;
+  const end = getConfiguredSegmentEnd();
+  if (end === null || currentMode === null) return;
+  const current = getCurrentVideoTime();
+  // Do not trigger while the player has not reached the segment start yet.
+  if (!Number.isFinite(current) || current < end - 0.15) return;
+  segmentEndHandled = true;
+  // Keep NEW's original play-all/repeat priority, otherwise pause at end.
+  if (isPlayAllEnabled() || isRepeatSegmentEnabled()) {
+    handleSegmentEnded();
+  } else if (currentMode === 'youtube' && player && typeof player.pauseVideo === 'function') {
+    player.pauseVideo();
+  } else if (currentMode === 'html') {
+    const media = document.getElementById('htmlVideo');
+    if (media) media.pause();
+  }
+}
+
 function handleSegmentEnded() {
   if (advancingAfterEnded) {
     return;
@@ -1029,7 +1101,7 @@ function startSkipButtonsUpdater() {
     clearInterval(skipButtonsTimer);
   }
 
-  skipButtonsTimer = setInterval(updateSkipButtons, 500);
+  skipButtonsTimer = setInterval(() => { updateSkipButtons(); checkSegmentEnd(); }, 250);
 }
 
 function parseTimeString(text) {
@@ -1124,4 +1196,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 setupOpenFullButton();
-loadLibraryData();
+setupWorkSelector();

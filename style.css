@@ -1211,3 +1211,8 @@ button:hover:not(:disabled) {
     max-width: 220px;
   }
 }
+
+/* Work selection, added without changing the existing player layout. */
+.work-selector-control { display:flex; align-items:center; gap:7px; flex-shrink:0; font-size:14px; }
+#workSelector { min-width:155px; max-width:260px; padding:6px; border:1px solid #aab7c4; border-radius:5px; background:#fff; font:inherit; }
+@media (max-width:800px) { .player-title-row { flex-wrap:wrap; } .work-selector-control { flex:1 1 100%; } #workSelector { flex:1; max-width:100%; } }
