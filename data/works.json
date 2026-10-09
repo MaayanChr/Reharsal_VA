@@ -1,0 +1,52 @@
+{
+  "works": [
+    {
+      "id": "choir-example",
+      "title": "חזרת מקהלה - דוגמה"
+    },
+    {
+      "id": "Debussy - Dieu",
+      "title": "Debussy - Dieu! qu'il la fait"
+    },
+    {
+      "id": "fuare_requiem",
+      "title": "גבריאל פורה - רקוויאם אופוס 48"
+    },
+    {
+      "id": "Haydn_Salve_Regina_T",
+      "title": "Salve Regina - Hydn"
+    },
+    {
+      "id": "Haydn_Salve_Regina_Tuti",
+      "title": "Haydn: Salve Regina - Tuti"
+    },
+    {
+      "id": "Mozart -Coronation Mass",
+      "title": "Mozart - Coronation Mass"
+    },
+    {
+      "id": "mozart_requiem",
+      "title": "מוצרט - רקוויאם 626 KV"
+    },
+    {
+      "id": "Mozart_Vesperae_Solennes",
+      "title": "Mozart - Vesperae Solennes"
+    },
+    {
+      "id": "Rossini - Petite Messe - Copy",
+      "title": "Rossini - Petite Messe Solennelle"
+    },
+    {
+      "id": "Rossini - Petite Messe",
+      "title": "Rossini - Petite Messe Solennelle"
+    },
+    {
+      "id": "T2",
+      "title": "אאידה - גרנד פינלה -אריאל"
+    },
+    {
+      "id": "Verdi Aida ( Ariel recordinga)",
+      "title": "Aida - Ariel"
+    }
+  ]
+}
