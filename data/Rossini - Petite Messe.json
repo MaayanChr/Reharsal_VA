@@ -73,7 +73,7 @@
         "source": "url",
         "ltr": true,
         "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
+        "url": "media/Rossini - Petite Messe Solennelle/S2.m4a",
         "end": -1
       },
       {
@@ -188,7 +188,7 @@
         "source": "url",
         "ltr": true,
         "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
+        "url": "media/Rossini - Petite Messe Solennelle/A1.m4a",
         "end": -1
       },
       {
@@ -303,7 +303,7 @@
         "source": "url",
         "ltr": true,
         "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
+        "url": "media/Rossini - Petite Messe Solennelle/T2.m4a",
         "end": -1
       },
       {
@@ -418,7 +418,7 @@
         "source": "url",
         "ltr": true,
         "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
+        "url": "media/Rossini - Petite Messe Solennelle/B1.m4a",
         "end": -1
       },
       {
@@ -528,6 +528,14 @@
         "end": -1
       },
       {
+        "title": "7.1 - Cum Sancto Corelia",
+        "source": "url",
+        "ltr": true,
+        "type": "audio",
+        "url": "media/Rossini - Petite Messe Solennelle/B2.m4a",
+        "end": -1
+      },
+      {
         "title": "8.0 - Credo",
         "source": "youtube",
         "ltr": true,
@@ -565,14 +573,6 @@
         "ltr": true,
         "videoId": "VmJ4-JJxejM",
         "start": 0,
-        "end": -1
-      },
-      {
-        "title": "7.1 - Cum Sancto Corelia",
-        "source": "url",
-        "ltr": true,
-        "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
         "end": -1
       }
     ],
@@ -646,7 +646,7 @@
         "source": "url",
         "ltr": true,
         "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
+        "url": "media/Rossini - Petite Messe Solennelle/T1.m4a",
         "end": -1
       },
       {
@@ -972,7 +972,7 @@
         "source": "url",
         "ltr": true,
         "type": "audio",
-        "url": "media/Rossini - Petite Messe Solennelle/S1.m4a",
+        "url": "media/Rossini - Petite Messe Solennelle/A1.m4a",
         "end": -1
       },
       {
