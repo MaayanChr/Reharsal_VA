@@ -69,6 +69,14 @@
         "end": -1
       },
       {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gQFMO3TMtNs",
+        "start": 0,
+        "end": -1
+      },
+      {
         "title": "7.1 - Cum Sancto Corelia",
         "source": "url",
         "ltr": true,
@@ -181,6 +189,14 @@
         "ltr": true,
         "videoId": "pUWr-L-KD14",
         "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pUWr-L-KD14",
+        "start": 23,
         "end": -1
       },
       {
@@ -299,6 +315,14 @@
         "end": -1
       },
       {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "GGunnrYMFgU",
+        "start": 23,
+        "end": -1
+      },
+      {
         "title": "7.1 - Cum Sancto Corelia",
         "source": "url",
         "ltr": true,
@@ -411,6 +435,14 @@
         "ltr": true,
         "videoId": "uP5Y_946qIE",
         "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 23,
         "end": -1
       },
       {
@@ -528,6 +560,14 @@
         "end": -1
       },
       {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 23,
+        "end": -1
+      },
+      {
         "title": "7.1 - Cum Sancto Corelia",
         "source": "url",
         "ltr": true,
@@ -639,6 +679,14 @@
         "ltr": true,
         "videoId": "GGunnrYMFgU",
         "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "GGunnrYMFgU",
+        "start": 23,
         "end": -1
       },
       {
@@ -854,6 +902,14 @@
         "end": -1
       },
       {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gQFMO3TMtNs",
+        "start": 0,
+        "end": -1
+      },
+      {
         "title": "7.1 - Cum Sancto Corelia",
         "source": "url",
         "ltr": true,
@@ -968,6 +1024,14 @@
         "end": -1
       },
       {
+        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pUWr-L-KD14",
+        "start": 23,
+        "end": -1
+      },
+      {
         "title": "7.1 - Cum Sancto Corelia",
         "source": "url",
         "ltr": true,
@@ -1029,7 +1093,7 @@
         "title": "2.2 Gloria-[bars 20-70]",
         "source": "url",
         "ltr": true,
-        "url": "media/Rossini - Petite Messe Solennelle/Gloria-bars 20-70  - All Voices.mp4",
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - All Voices.mp4",
         "end": -1
       }
     ],
@@ -1038,7 +1102,7 @@
         "title": "2.2 Gloria-[bars 20-70]",
         "source": "url",
         "ltr": true,
-        "url": "media/Rossini - Petite Messe Solennelle/Gloria-bars 20-70  - Soprano.mp4",
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Soprano.mp4",
         "end": -1
       }
     ],
@@ -1047,7 +1111,7 @@
         "title": "2.2 Gloria-[bars 20-70]",
         "source": "url",
         "ltr": true,
-        "url": "media/Rossini - Petite Messe Solennelle/Gloria-bars 20-70  - Alto.mp4",
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Alto.mp4",
         "end": -1
       }
     ],
@@ -1056,7 +1120,7 @@
         "title": "2.2 Gloria-[bars 20-70]",
         "source": "url",
         "ltr": true,
-        "url": "media/Rossini - Petite Messe Solennelle/Gloria-bars 20-70  - Ténor.mp4",
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Ténor.mp4",
         "end": -1
       }
     ],
@@ -1065,7 +1129,7 @@
         "title": "2.2 Gloria-[bars 20-70]",
         "source": "url",
         "ltr": true,
-        "url": "media/Rossini - Petite Messe Solennelle/Gloria-bars 20-70  - Ténor.mp4",
+        "url": "media/Rossini - Petite messe solennelle/Gloria-bars 20-70  - Ténor.mp4",
         "end": -1
       }
     ]
