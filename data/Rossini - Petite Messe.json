@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "bass2",
+  "defaultGroup": "Base1",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -73,7 +73,23 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "gQFMO3TMtNs",
-        "start": 0,
+        "start": 14,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gQFMO3TMtNs",
+        "start": 69,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gQFMO3TMtNs",
+        "start": 312,
         "end": -1
       },
       {
@@ -192,11 +208,19 @@
         "end": -1
       },
       {
-        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "title": "7.0.1 - Cum Sancto (bar 693)",
         "source": "youtube",
         "ltr": true,
         "videoId": "pUWr-L-KD14",
         "start": 23,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pUWr-L-KD14",
+        "start": 69,
         "end": -1
       },
       {
@@ -315,11 +339,27 @@
         "end": -1
       },
       {
-        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "title": "7.0.1 - Cum Sancto (bar 693)",
         "source": "youtube",
         "ltr": true,
         "videoId": "GGunnrYMFgU",
         "start": 23,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "GGunnrYMFgU",
+        "start": 69,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "GGunnrYMFgU",
+        "start": 312,
         "end": -1
       },
       {
@@ -438,11 +478,27 @@
         "end": -1
       },
       {
-        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "title": "7.0.1 - Cum Sancto (bar 693)",
         "source": "youtube",
         "ltr": true,
         "videoId": "uP5Y_946qIE",
         "start": 23,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 79,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 312,
         "end": -1
       },
       {
@@ -560,11 +616,35 @@
         "end": -1
       },
       {
-        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "title": "7.0.1 - Cum Sancto (bar 693)",
         "source": "youtube",
         "ltr": true,
         "videoId": "uP5Y_946qIE",
         "start": 23,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 79,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 312,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "uP5Y_946qIE",
+        "start": 312,
         "end": -1
       },
       {
@@ -682,11 +762,27 @@
         "end": -1
       },
       {
-        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "title": "7.0.1 - Cum Sancto (bar 693)",
         "source": "youtube",
         "ltr": true,
         "videoId": "GGunnrYMFgU",
         "start": 23,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "GGunnrYMFgU",
+        "start": 69,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "GGunnrYMFgU",
+        "start": 312,
         "end": -1
       },
       {
@@ -906,7 +1002,23 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "gQFMO3TMtNs",
-        "start": 0,
+        "start": 14,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gQFMO3TMtNs",
+        "start": 69,
+        "end": -1
+      },
+      {
+        "title": "7.0.3 - Cum Sancto (bar 892)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gQFMO3TMtNs",
+        "start": 312,
         "end": -1
       },
       {
@@ -1024,11 +1136,19 @@
         "end": -1
       },
       {
-        "title": "7.0.1 - Cum Sancto (bar 688)",
+        "title": "7.0.1 - Cum Sancto (bar 693)",
         "source": "youtube",
         "ltr": true,
         "videoId": "pUWr-L-KD14",
         "start": 23,
+        "end": -1
+      },
+      {
+        "title": "7.0.2 - Cum Sancto (bar 720)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pUWr-L-KD14",
+        "start": 69,
         "end": -1
       },
       {
