@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "Base1",
+  "defaultGroup": "bass2",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -629,14 +629,6 @@
         "ltr": true,
         "videoId": "uP5Y_946qIE",
         "start": 79,
-        "end": -1
-      },
-      {
-        "title": "7.0.3 - Cum Sancto (bar 892)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "uP5Y_946qIE",
-        "start": 312,
         "end": -1
       },
       {
