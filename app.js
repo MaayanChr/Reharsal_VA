@@ -1,4 +1,5 @@
 let player = null;
+let activeYoutubeVideoId = null; // Retain the same embedded player across segments of one video.
 let libraryData = null;
 let currentGroup = null;
 let youtubeReady = false;
@@ -487,6 +488,7 @@ function loadYouTubeSegment(segment, autoplay) {
   const startSeconds = Number(segment.start) || 0;
 
   if (!player) {
+    activeYoutubeVideoId = videoId;
     player = new YT.Player('player', {
       videoId: videoId,
       playerVars: {
@@ -500,11 +502,22 @@ function loadYouTubeSegment(segment, autoplay) {
         onStateChange: onYouTubePlayerStateChange
       }
     });
+  } else if (activeYoutubeVideoId === videoId) {
+    // Switching segments inside the same YouTube video must not reload it.
+    // A seek preserves the existing iframe and playback session.
+    player.seekTo(startSeconds, true);
+    if (autoplay) {
+      player.playVideo();
+    } else {
+      player.pauseVideo();
+    }
   } else {
-    player.loadVideoById({
-      videoId: videoId,
-      startSeconds: startSeconds
-    });
+    activeYoutubeVideoId = videoId;
+    if (autoplay) {
+      player.loadVideoById({ videoId: videoId, startSeconds: startSeconds });
+    } else {
+      player.cueVideoById({ videoId: videoId, startSeconds: startSeconds });
+    }
     setTimeout(() => applyPlaybackSpeed(), 0);
   }
 
@@ -517,6 +530,8 @@ function loadHtmlMedia(mediaUrl, autoplay, mediaType, startSeconds) {
 
   stopCurrentVideo();
   wrapper.innerHTML = '';
+  player = null;
+  activeYoutubeVideoId = null;
 
   wrapper.classList.toggle('audio-wrapper', mediaType === 'audio');
 
@@ -597,6 +612,7 @@ function ensureYouTubeContainer() {
     wrapper.classList.remove('audio-wrapper');
     wrapper.innerHTML = '<div id="player"></div>';
     player = null;
+    activeYoutubeVideoId = null;
   }
 }
 
@@ -608,6 +624,7 @@ function clearPlayer() {
   wrapper.innerHTML = '<div id="player"></div>';
 
   player = null;
+  activeYoutubeVideoId = null;
   currentMode = null;
 }
 
