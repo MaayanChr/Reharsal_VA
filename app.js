@@ -411,7 +411,7 @@ function loadSegment(segment, autoplay) {
   currentSegment = segment;
   segmentEndHandled = false;
 
-  if (isDifferentSegment) {
+  if (isPlaybackSpeedResetEnabled()) {
     resetPlaybackSpeed();
   }
 
@@ -734,6 +734,7 @@ function setupOpenFullButton() {
 function setupPlaybackOptions() {
   const playAll = document.getElementById('playAllCheckbox');
   const repeatOne = document.getElementById('repeatSegmentCheckbox');
+  const resetSpeed = document.getElementById('resetPlaybackSpeedCheckbox');
 
   if (playAll) {
     playAll.checked = false;
@@ -741,6 +742,10 @@ function setupPlaybackOptions() {
 
   if (repeatOne) {
     repeatOne.checked = false;
+  }
+
+  if (resetSpeed) {
+    resetSpeed.checked = false;
   }
 }
 
@@ -805,18 +810,36 @@ function resetPlaybackSpeed() {
 
 function setupPlaybackSpeed() {
   const slider = document.getElementById('playbackSpeedRange');
+  const slowerButton = document.getElementById('playbackSpeedMinus');
+  const fasterButton = document.getElementById('playbackSpeedPlus');
 
   currentPlaybackRate = DEFAULT_PLAYBACK_RATE;
   updatePlaybackSpeedDisplay();
 
-  if (!slider) {
-    return;
+  if (slider) {
+    slider.addEventListener('input', () => {
+      setPlaybackSpeed(slider.value);
+    });
   }
 
-  slider.addEventListener('input', () => {
-    setPlaybackSpeed(slider.value);
-  });
+  if (slowerButton) {
+    slowerButton.onclick = () => {
+      setPlaybackSpeed((currentPlaybackRate - 0.1).toFixed(1));
+    };
+  }
+
+  if (fasterButton) {
+    fasterButton.onclick = () => {
+      setPlaybackSpeed((currentPlaybackRate + 0.1).toFixed(1));
+    };
+  }
 }
+
+function isPlaybackSpeedResetEnabled() {
+  const checkbox = document.getElementById('resetPlaybackSpeedCheckbox');
+  return !!(checkbox && checkbox.checked);
+}
+
 function isPlayAllEnabled() {
   const checkbox = document.getElementById('playAllCheckbox');
   return !!(checkbox && checkbox.checked);

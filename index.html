@@ -63,17 +63,27 @@
                 ספרית היצירות
             </h2>
 
-            <label class="playback-speed-control" for="playbackSpeedRange">
-              <span>מהירות</span>
-              <input
-                type="range"
-                id="playbackSpeedRange"
-                min="0.5"
-                max="2"
-                step="0.1"
-                value="1">
-              <span id="playbackSpeedValue" class="playback-speed-value">1.0×</span>
-            </label>
+            <div class="playback-speed-control">
+              <label class="reset-speed-option">
+                <input type="checkbox" id="resetPlaybackSpeedCheckbox">
+                אפס מהירות בהפעלת קטע
+              </label>
+
+              <div class="playback-speed-row">
+                <span class="playback-speed-label">מהירות</span>
+                <button id="playbackSpeedMinus" class="playback-speed-step" type="button" aria-label="האט מהירות">−</button>
+                <input
+                  type="range"
+                  id="playbackSpeedRange"
+                  min="0.5"
+                  max="2"
+                  step="0.1"
+                  value="1"
+                  aria-label="מהירות נגינה">
+                <button id="playbackSpeedPlus" class="playback-speed-step" type="button" aria-label="האץ מהירות">+</button>
+                <span id="playbackSpeedValue" class="playback-speed-value">1.0×</span>
+              </div>
+            </div>
         </div>
 
         <!-- מוצג רק בנייד -->

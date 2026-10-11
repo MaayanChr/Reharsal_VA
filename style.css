@@ -1221,3 +1221,74 @@ button:hover:not(:disabled) {
 @media (max-width: 800px) {
   .player-title-row #libraryTitle { display: none !important; }
 }
+
+
+/* Playback speed: reset option + step buttons */
+.playback-speed-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex-shrink: 0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.reset-speed-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.playback-speed-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  direction: ltr;
+}
+
+.playback-speed-label {
+  direction: rtl;
+}
+
+.playback-speed-step {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+  .playback-speed-control {
+    font-size: 12px;
+  }
+
+  .reset-speed-option {
+    font-size: 11px;
+  }
+
+  .playback-speed-step {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .playback-speed-control {
+    width: 100%;
+  }
+
+  .playback-speed-row {
+    width: 100%;
+  }
+
+  #playbackSpeedRange {
+    flex: 1;
+  }
+}
