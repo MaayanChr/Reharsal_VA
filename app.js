@@ -685,6 +685,12 @@ function isInsideIframe() {
   }
 }
 
+// Explicit embed mode: hide work selection while keeping the requested work loaded.
+function setupEmbedMode() {
+  const params = new URLSearchParams(window.location.search);
+  document.body.classList.toggle('embed-mode', params.get('embed') === '1');
+}
+
 function setupOpenFullButton() {
   const btn = document.getElementById('openFullBtn');
 
@@ -704,6 +710,8 @@ function setupOpenFullButton() {
 
     btn.onclick = function () {
       const currentUrl = new URL(window.location.href);
+      // Full-page view restores the regular work selector.
+      currentUrl.searchParams.delete('embed');
 
       if (
         document.referrer &&
@@ -1251,5 +1259,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+setupEmbedMode();
 setupOpenFullButton();
 setupWorkSelector();

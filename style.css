@@ -1292,3 +1292,6 @@ button:hover:not(:disabled) {
     flex: 1;
   }
 }
+
+/* Google Sites embed mode: hide only the work selection control. */
+body.embed-mode .work-selector-control { display: none !important; }
