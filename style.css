@@ -1295,3 +1295,6 @@ button:hover:not(:disabled) {
 
 /* Google Sites embed mode: hide only the work selection control. */
 body.embed-mode .work-selector-control { display: none !important; }
+
+/* Embed mode: explicit embed=0 shows; embed=1 or iframe default hides. */
+body.embed-mode .work-selector-control { display: none !important; }
