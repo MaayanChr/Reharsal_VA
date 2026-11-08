@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Handel Messiah",
-  "defaultGroup": "soprano",
+  "defaultGroup": "alto",
   "segments": {
     "soprano": [
       {
@@ -168,6 +168,168 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "qLPvGI20Y8c",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "alto": [
+      {
+        "title": "4 - And the glory of the Lord",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VTV5FV5KwlU",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7 - And he shall purifyd",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "yqdK_yYjiuk",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "9 - O thou that tellest",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "SSMf1kLl7bo",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "12 - For unto us a Child",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Y9niXCM681g",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "17 - Glory to God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "TsPS4nEbpLA",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "21 - His Yoke is Easy",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "XLB6wa7rtAg",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "22 - Behold the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qF7pGPKgaoo",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "24 - Surely he hath borne",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "WLP7BFF44Ng",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "25 - And with his stripes",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "D2z0QknaybI",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "26 - All we like sheep",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "jd5hbAfJswM",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "28 - He trusted in God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Ktpyx6FoYeA",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "33 - Lift up your heads",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "xZdVMM1iVw8",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "35 - Let all the angels",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "2LvjUEWPP84",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "37 - The Lord gave",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "D6CDheDxqCs",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "39 - Their sound is gone",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YSFy_hOhu8w",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "41 - Let us break",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "estu2sHp25s",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "44 - Hallelujah!",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ozePoz5sgyw",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "46 - Since by man",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "UWQ9S5Lkivk",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "51 - But thanks",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "dXgVs4lZyts",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "53 - Worthy is the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YrM1_KaJGic",
         "start": 0,
         "end": -1
       }
