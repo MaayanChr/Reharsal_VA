@@ -685,10 +685,12 @@ function isInsideIframe() {
   }
 }
 
-// Explicit embed mode: hide work selection while keeping the requested work loaded.
+// Explicit embed=0 / embed=1 override iframe auto-detection.
+// By default the work selector is hidden inside an iframe and visible otherwise.
 function setupEmbedMode() {
-  const params = new URLSearchParams(window.location.search);
-  document.body.classList.toggle('embed-mode', params.get('embed') === '1');
+  const embed = new URLSearchParams(window.location.search).get('embed');
+  const hideSelector = embed === '1' || (embed !== '0' && isInsideIframe());
+  document.body.classList.toggle('embed-mode', hideSelector);
 }
 
 function setupOpenFullButton() {
