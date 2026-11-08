@@ -2,6 +2,21 @@
 <html lang="he" dir="rtl">
 
 <head>
+    <!-- Embed mode is resolved before the player is displayed. -->
+    <script>
+    (function () {
+      var embed = new URLSearchParams(location.search).get('embed');
+      var insideFrame = false;
+      try { insideFrame = window.self !== window.top; }
+      catch (_) { insideFrame = true; }
+      var hide = embed === '1' || (embed !== '0' && insideFrame);
+      document.documentElement.classList.toggle('embed-mode', hide);
+    })();
+    </script>
+    <style>
+      html.embed-mode .work-selector-control { display: none !important; }
+    </style>
+
     <meta charset="UTF-8">
     <title>ספרית היצירות</title>
 
@@ -9,7 +24,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet"
-          href="style.css">
+          href="style.css?v=embed-fix-3">
 
 <style>
   #premiumNotice[hidden] { display:none !important; }
@@ -171,7 +186,7 @@
 
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script src="app.js"></script>
+<script src="app.js?v=embed-fix-3"></script>
 
 </body>
 

@@ -691,6 +691,11 @@ function setupEmbedMode() {
   const embed = new URLSearchParams(window.location.search).get('embed');
   const hideSelector = embed === '1' || (embed !== '0' && isInsideIframe());
   document.body.classList.toggle('embed-mode', hideSelector);
+  document.documentElement.classList.toggle('embed-mode', hideSelector);
+  const control = document.querySelector('.work-selector-control');
+  if (control) {
+    control.style.setProperty('display', hideSelector ? 'none' : 'flex', 'important');
+  }
 }
 
 function setupOpenFullButton() {

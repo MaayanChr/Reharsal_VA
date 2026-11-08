@@ -1298,3 +1298,6 @@ body.embed-mode .work-selector-control { display: none !important; }
 
 /* Embed mode: explicit embed=0 shows; embed=1 or iframe default hides. */
 body.embed-mode .work-selector-control { display: none !important; }
+
+/* Robust early embed detection: HTML-root class also controls visibility. */
+html.embed-mode .work-selector-control { display: none !important; }
