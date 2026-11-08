@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Handel Messiah",
-  "defaultGroup": "alto",
+  "defaultGroup": "bass",
   "segments": {
     "soprano": [
       {
@@ -330,6 +330,330 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "YrM1_KaJGic",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "tenor": [
+      {
+        "title": "4 - And the glory of the Lord",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "-djvRC22IvQ",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7 - And he shall purifyd",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "yqdK_yYjiuk",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "9 - O thou that tellest",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iKQv1OnPa9c",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "12 - For unto us a Child",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "nAknMOM2V9U",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "17 - Glory to God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "eqrsWoQM_C8",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "21 - His Yoke is Easy",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "lmaB_rh3RII",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "22 - Behold the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "nmjzSElEcS8",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "24 - Surely he hath borne",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "gt2cJa8VKnU",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "25 - And with his stripes",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "jdLCfVeklFo",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "26 - All we like sheep",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YqeJ1p8euuQ",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "28 - He trusted in God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "U_VIS5EYxf0",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "33 - Lift up your heads",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qQY_t34sR40",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "35 - Let all the angels",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "DG9hel4kvis",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "37 - The Lord gave",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "dRnwfwaOyWk",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "39 - Their sound is gone",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "zL9vGbJWiw4",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "41 - Let us break",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "FNBQf_184Nk",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "44 - Hallelujah!",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "0-zsntqOZ98",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "46 - Since by man",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "urK-aHx984o",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "51 - But thanks",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "0sXmNZOTokI",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "53 - Worthy is the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "vITTy1wTazM",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "bass": [
+      {
+        "title": "4 - And the glory of the Lord",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "UYh3jqZthk4",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7 - And he shall purifyd",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tA3zc6tUtrc",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "9 - O thou that tellest",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "eaGUiatnB6o",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "12 - For unto us a Child",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "WVxN4Xts_UY",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "17 - Glory to God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ZIBAZFdVac4",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "21 - His Yoke is Easy",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "2hIJ3hzZuEw",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "22 - Behold the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "oBH7-bm9ph8",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "24 - Surely he hath borne",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "FT1LJcGtL6M",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "25 - And with his stripes",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KzGsBv3IvgM",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "26 - All we like sheep",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "CJMs2dt0Tso",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "28 - He trusted in God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "0pQ2AKfA7GE",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "33 - Lift up your heads",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "TwgG3RIHBII",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "35 - Let all the angels",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "BuN3Lf4KRt4",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "37 - The Lord gave",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "eBHuMV-Zx2k",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "39 - Their sound is gone",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "dDyghQGR8hc",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "41 - Let us break",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "h3gK98No75I",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "44 - Hallelujah!",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ETu0pgjZDaU",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "46 - Since by man",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tqmmkvCnQSk",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "51 - But thanks",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q8LWaExKmTc",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "53 - Worthy is the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "2ri5_lJAIes",
         "start": 0,
         "end": -1
       }
