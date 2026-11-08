@@ -1,0 +1,250 @@
+{
+  "libraryTitle": "Handel Messiah",
+  "defaultGroup": "soprano",
+  "segments": {
+    "soprano": [
+      {
+        "title": "4 - And the glory of the Lord",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "dkCWJzbrpi0",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "7 - And he shall purifyd",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Waxq82N0JnU",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "9 - O thou that tellest",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "PKtRxSXibWU",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "12 - For unto us a Child",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "YuuGd3YL1Nw",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "17 - Glory to God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "XOuvg6aSoko",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "21 - His Yoke is Easy",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Pfsg1uFebFA",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "22 - Behold the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "6N7TJbm_xms",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "24 - Surely he hath borne",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "lNJYg5yxPaw",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "25 - And with his stripes",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "7xRZwTeTt1Q",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "26 - All we like sheep",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "pQwiLMOuzFc",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "28 - He trusted in God",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "3aHNGvft1KA",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "33 - Lift up your heads (S1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "7OgWlDUq_hw",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "33 - Lift up your heads (S2)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "7OgWlDUq_hw",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "35 - Let all the angels",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "r7tDkykCfSo",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "37 - The Lord gave",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "RTHmwRkhQ2U",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "39 - Their sound is gone",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "riNkzQEmroE",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "41 - Let us break",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "9irvFBbljP8",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "44 - Hallelujah!",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "4lr0TD1jhxA",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "46 - Since by man",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "WpSqCqCtKJg",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "51 - But thanks",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qLPvGI20Y8c",
+        "start": 0,
+        "end": -1
+      },
+      {
+        "title": "53 - Worthy is the Lamb",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "qLPvGI20Y8c",
+        "start": 0,
+        "end": -1
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "sonprano1",
+      "label": "סופרן 1"
+    },
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "alto1",
+      "label": "אלט 1"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "Tenor1",
+      "label": "טנור 1"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "Base1",
+      "label": "בס 1"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    },
+    {
+      "id": "solos",
+      "label": "סולנים"
+    },
+    {
+      "id": "SopSoli",
+      "label": "סופרן סולו"
+    },
+    {
+      "id": "AltSoli",
+      "label": "אלט סולו"
+    },
+    {
+      "id": "TenSoli",
+      "label": "טנור סולו"
+    },
+    {
+      "id": "BassSoli",
+      "label": "בס סולו"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ]
+}
