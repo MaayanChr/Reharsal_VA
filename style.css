@@ -1307,7 +1307,7 @@ html.embed-mode .work-selector-control { display: none !important; }
    Uses the existing embed-mode class controlled by app.js (embed=0/1/iframe). */
 @media (min-width: 801px) {
   body.embed-mode {
-    width: 90%;
+    width: 95%;
     max-width: 1400px;
     margin-inline: auto;
   }
