@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Coronation Mass",
-  "defaultGroup": "soprano",
+  "defaultGroup": "alto",
   "groups": [
     {
       "id": "soprano",
@@ -150,7 +150,7 @@
         "end": -1
       },
       {
-        "title": "5 - Benedictus",
+        "title": "5.1 - Benedictus (Tuti p. 43)",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
@@ -158,7 +158,7 @@
         "end": 938
       },
       {
-        "title": "5 - Benedictus (Tuti p. 44)",
+        "title": "5.2 - Benedictus (Tuti p. 44)",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
@@ -246,6 +246,22 @@
         "videoId": "_mgw3yP6PJ4",
         "start": 827,
         "end": -1
+      },
+      {
+        "title": "5.1 - Benedictus (Tuti p. 43)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 924,
+        "end": 938
+      },
+      {
+        "title": "5.2 - Benedictus (Tuti p. 44)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "_mgw3yP6PJ4",
+        "start": 958,
+        "end": 1008
       },
       {
         "title": "6 - Agnus Dei",
