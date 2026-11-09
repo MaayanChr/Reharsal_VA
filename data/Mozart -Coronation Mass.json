@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Coronation Mass",
-  "defaultGroup": "alto",
+  "defaultGroup": "bass",
   "groups": [
     {
       "id": "soprano",
@@ -163,7 +163,7 @@
         "ltr": true,
         "videoId": "KIgZaICGamo",
         "start": 958,
-        "end": 1008
+        "end": 985
       },
       {
         "title": "6 - Agnus Dei",
@@ -172,6 +172,14 @@
         "videoId": "KIgZaICGamo",
         "start": 1010,
         "end": -1
+      },
+      {
+        "title": "6.1 - Agnus Dei (Tuti p.50)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 1177,
+        "end": 1302
       }
     ],
     "alto": [
@@ -252,8 +260,8 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 924,
-        "end": 938
+        "start": 922,
+        "end": 940
       },
       {
         "title": "5.2 - Benedictus (Tuti p. 44)",
@@ -261,7 +269,7 @@
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
         "start": 958,
-        "end": 1008
+        "end": 985
       },
       {
         "title": "6 - Agnus Dei",
@@ -270,6 +278,14 @@
         "videoId": "_mgw3yP6PJ4",
         "start": 1010,
         "end": -1
+      },
+      {
+        "title": "6.1 - Agnus Dei (Tuti p.50)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 1177,
+        "end": 1302
       }
     ],
     "tenor": [
@@ -346,12 +362,36 @@
         "end": -1
       },
       {
+        "title": "5.1 - Benedictus (Tuti p. 43)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 922,
+        "end": 940
+      },
+      {
+        "title": "5.2 - Benedictus (Tuti p. 44)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 958,
+        "end": 985
+      },
+      {
         "title": "6 - Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
         "start": 981,
         "end": -1
+      },
+      {
+        "title": "6.1 - Agnus Dei (Tuti p.50)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "iZUeI8Upu04",
+        "start": 1177,
+        "end": 1302
       }
     ],
     "bass": [
@@ -428,12 +468,36 @@
         "end": -1
       },
       {
+        "title": "5.1 - Benedictus (Tuti p. 43)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 922,
+        "end": 940
+      },
+      {
+        "title": "5.2 - Benedictus (Tuti p. 44)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 958,
+        "end": 985
+      },
+      {
         "title": "6 - Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
         "start": 1010,
         "end": -1
+      },
+      {
+        "title": "6.1 - Agnus Dei (Tuti p.50)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "fXAkS53sOuI",
+        "start": 1177,
+        "end": 1302
       }
     ],
     "all": [],
