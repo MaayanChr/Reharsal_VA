@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Mozart - Coronation Mass",
-  "defaultGroup": "tenor",
+  "defaultGroup": "soprano",
   "groups": [
     {
       "id": "soprano",
@@ -82,70 +82,96 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 0
+        "start": 0,
+        "end": -1
       },
       {
         "title": "2- Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 116
+        "start": 116,
+        "end": -1
       },
       {
         "title": "3 - Credo",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 381
+        "start": 381,
+        "end": -1
       },
       {
         "title": "3.1 - Credo (bar 18)",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 416
+        "start": 416,
+        "end": -1
       },
       {
         "title": "3.2 - Credo (bar 36)",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 452
+        "start": 452,
+        "end": -1
       },
       {
         "title": "3.3 - Credo (bar 65)",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 519
+        "start": 519,
+        "end": -1
       },
       {
         "title": "3.4 - Credo (bar 114)",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 632
+        "start": 632,
+        "end": -1
       },
       {
         "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 717
+        "start": 717,
+        "end": -1
       },
       {
         "title": "5 - Benedictus",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 827
+        "start": 827,
+        "end": -1
+      },
+      {
+        "title": "5 - Benedictus",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 924,
+        "end": 938
+      },
+      {
+        "title": "5 - Benedictus (Tuti p. 44)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "KIgZaICGamo",
+        "start": 958,
+        "end": 1008
       },
       {
         "title": "6 - Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "KIgZaICGamo",
-        "start": 1010
+        "start": 1010,
+        "end": -1
       }
     ],
     "alto": [
@@ -154,70 +180,80 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 0
+        "start": 0,
+        "end": -1
       },
       {
         "title": "2- Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 114
+        "start": 114,
+        "end": -1
       },
       {
         "title": "3 - Credo",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 381
+        "start": 381,
+        "end": -1
       },
       {
         "title": "3.1 - Credo (bar 18)",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 416
+        "start": 416,
+        "end": -1
       },
       {
         "title": "3.2 - Credo (bar 36)",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 452
+        "start": 452,
+        "end": -1
       },
       {
         "title": "3.3 - Credo (bar 65)",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 519
+        "start": 519,
+        "end": -1
       },
       {
         "title": "3.4 - Credo (bar 114)",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 632
+        "start": 632,
+        "end": -1
       },
       {
         "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 712
+        "start": 712,
+        "end": -1
       },
       {
         "title": "5 - Benedictus",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 827
+        "start": 827,
+        "end": -1
       },
       {
         "title": "6 - Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "_mgw3yP6PJ4",
-        "start": 1010
+        "start": 1010,
+        "end": -1
       }
     ],
     "tenor": [
@@ -226,70 +262,80 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 0
+        "start": 0,
+        "end": -1
       },
       {
         "title": "2- Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 116
+        "start": 116,
+        "end": -1
       },
       {
         "title": "3 - Credo",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 381
+        "start": 381,
+        "end": -1
       },
       {
         "title": "3.1 - Credo (bar 18)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 417
+        "start": 417,
+        "end": -1
       },
       {
         "title": "3.2 - Credo (bar 36)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 452
+        "start": 452,
+        "end": -1
       },
       {
         "title": "3.3 - Credo (bar 65)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 519
+        "start": 519,
+        "end": -1
       },
       {
         "title": "3.4 - Credo (bar 114)",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 632
+        "start": 632,
+        "end": -1
       },
       {
         "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 712
+        "start": 712,
+        "end": -1
       },
       {
         "title": "5 - Benedictus",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 801
+        "start": 801,
+        "end": -1
       },
       {
         "title": "6 - Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "iZUeI8Upu04",
-        "start": 981
+        "start": 981,
+        "end": -1
       }
     ],
     "bass": [
@@ -298,70 +344,80 @@
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 0
+        "start": 0,
+        "end": -1
       },
       {
         "title": "2- Gloria",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 116
+        "start": 116,
+        "end": -1
       },
       {
         "title": "3 - Credo",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 392
+        "start": 392,
+        "end": -1
       },
       {
         "title": "3.1 - Credo (bar 18)",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 416
+        "start": 416,
+        "end": -1
       },
       {
         "title": "3.2 - Credo (bar 36)",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 452
+        "start": 452,
+        "end": -1
       },
       {
         "title": "3.3 - Credo (bar 65)",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 519
+        "start": 519,
+        "end": -1
       },
       {
         "title": "3.4 - Credo (bar 114)",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 632
+        "start": 632,
+        "end": -1
       },
       {
         "title": "4 - Sanctus",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 711
+        "start": 711,
+        "end": -1
       },
       {
         "title": "5 - Benedictus",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 801
+        "start": 801,
+        "end": -1
       },
       {
         "title": "6 - Agnus Dei",
         "source": "youtube",
         "ltr": true,
         "videoId": "fXAkS53sOuI",
-        "start": 1010
+        "start": 1010,
+        "end": -1
       }
     ],
     "all": [],
