@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "sonprano1",
+  "defaultGroup": "bass2",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -107,6 +107,46 @@
         "videoId": "Q6eXRh0JYOc",
         "start": 0,
         "end": -1
+      },
+      {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Q6eXRh0JYOc",
+        "start": 235,
+        "end": 250
       },
       {
         "title": "9.0",
@@ -238,6 +278,46 @@
         "videoId": "VrwxvF7V438",
         "start": 0,
         "end": -1
+      },
+      {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 235,
+        "end": 250
       },
       {
         "title": "9.0",
@@ -379,6 +459,46 @@
         "end": -1
       },
       {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mc82DiJe_4g",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mc82DiJe_4g",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mc82DiJe_4g",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mc82DiJe_4g",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mc82DiJe_4g",
+        "start": 235,
+        "end": 250
+      },
+      {
         "title": "9.0",
         "source": "youtube",
         "ltr": true,
@@ -516,6 +636,46 @@
         "videoId": "720qatnyg60",
         "start": 0,
         "end": -1
+      },
+      {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "720qatnyg60",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "720qatnyg60",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "720qatnyg60",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "720qatnyg60",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "720qatnyg60",
+        "start": 235,
+        "end": 250
       },
       {
         "title": "9.0",
@@ -656,6 +816,46 @@
         "end": -1
       },
       {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Klp_ENXSIGs",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Klp_ENXSIGs",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Klp_ENXSIGs",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Klp_ENXSIGs",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "Klp_ENXSIGs",
+        "start": 235,
+        "end": 250
+      },
+      {
         "title": "9.0",
         "source": "youtube",
         "ltr": true,
@@ -792,6 +992,46 @@
         "videoId": "kEhM2jj1hH8",
         "start": 0,
         "end": -1
+      },
+      {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "kEhM2jj1hH8",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "kEhM2jj1hH8",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "kEhM2jj1hH8",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "kEhM2jj1hH8",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "kEhM2jj1hH8",
+        "start": 235,
+        "end": 250
       },
       {
         "title": "9.0",
@@ -1035,7 +1275,7 @@
         "ltr": true,
         "videoId": "Q6eXRh0JYOc",
         "start": 0,
-        "end": 44
+        "end": 45
       },
       {
         "title": "8.2 - Credo (bar 33)",
@@ -1198,6 +1438,46 @@
         "videoId": "VrwxvF7V438",
         "start": 0,
         "end": -1
+      },
+      {
+        "title": "8.1 - Credo (bar 1)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "title": "8.2 - Credo (bar 33)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 63,
+        "end": 95
+      },
+      {
+        "title": "8.3 - Credo (bar 59)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 114,
+        "end": 146
+      },
+      {
+        "title": "8.4 - Credo (bar 84)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 163,
+        "end": 211
+      },
+      {
+        "title": "8.5 - Credo (bar 121)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "VrwxvF7V438",
+        "start": 235,
+        "end": 250
       },
       {
         "title": "9.0",
