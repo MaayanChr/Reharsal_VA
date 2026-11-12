@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "bass2",
+  "defaultGroup": "sonprano1",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -149,7 +149,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "vgk03Mm4OXo",
@@ -320,7 +320,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "rv6_rFqa6Lk",
@@ -499,7 +499,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "p7XRYDfVq24",
@@ -678,7 +678,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "IafkRi9A4bE",
@@ -856,7 +856,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "Is1meU1KuE4",
@@ -1034,7 +1034,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "MtYZzQ3HvWM",
@@ -1310,7 +1310,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "tr8cAoQXEq4",
@@ -1318,11 +1318,59 @@
         "end": -1
       },
       {
-        "title": "10.0",
+        "title": "10.0 Et Rewsurrexit",
         "source": "youtube",
         "ltr": true,
         "videoId": "tr8cAoQXEq4",
-        "start": 0,
+        "start": 145,
+        "end": -1
+      },
+      {
+        "title": "10.1 Et Rewsurrexit (bar 188)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 145,
+        "end": 197
+      },
+      {
+        "title": "10.2 Et Rewsurrexit (bar 216)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 213,
+        "end": 223
+      },
+      {
+        "title": "10.3 Et Rewsurrexit (bar 231)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 240,
+        "end": 352
+      },
+      {
+        "title": "10.4 Et Rewsurrexit (bar 266)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 371,
+        "end": 449
+      },
+      {
+        "title": "10.5 Et Rewsurrexit (bar 342)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 465,
+        "end": 703
+      },
+      {
+        "title": "10.6 Et Rewsurrexit (bar 558)",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "tr8cAoQXEq4",
+        "start": 714,
         "end": -1
       },
       {
@@ -1480,7 +1528,7 @@
         "end": 250
       },
       {
-        "title": "9.0",
+        "title": "9.0 Crucifixus",
         "source": "youtube",
         "ltr": true,
         "videoId": "rv6_rFqa6Lk",
