@@ -1,6 +1,6 @@
 {
   "libraryTitle": "Rossini - Petite Messe Solennelle",
-  "defaultGroup": "Base1",
+  "defaultGroup": "sonprano1",
   "segments": {
     "soprano": [],
     "soprano2": [
@@ -392,14 +392,6 @@
         "end": 197
       },
       {
-        "title": "10.1 Et Resurrexit (bar 188)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "rv6_rFqa6Lk",
-        "start": 155,
-        "end": 197
-      },
-      {
         "title": "10.2 Et Resurrexit (bar 216)",
         "source": "youtube",
         "ltr": true,
@@ -617,14 +609,6 @@
         "videoId": "p7XRYDfVq24",
         "start": 155,
         "end": -1
-      },
-      {
-        "title": "10.1 Et Resurrexit (bar 188)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "p7XRYDfVq24",
-        "start": 155,
-        "end": 197
       },
       {
         "title": "10.1 Et Resurrexit (bar 188)",
@@ -862,14 +846,6 @@
         "end": 197
       },
       {
-        "title": "10.1 Et Resurrexit (bar 188)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "IafkRi9A4bE",
-        "start": 155,
-        "end": 197
-      },
-      {
         "title": "10.2 Et Resurrexit (bar 216)",
         "source": "youtube",
         "ltr": true,
@@ -1096,14 +1072,6 @@
         "end": 197
       },
       {
-        "title": "10.1 Et Resurrexit (bar 188)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "Is1meU1KuE4",
-        "start": 155,
-        "end": 197
-      },
-      {
         "title": "10.2 Et Resurrexit (bar 216)",
         "source": "youtube",
         "ltr": true,
@@ -1320,14 +1288,6 @@
         "videoId": "MtYZzQ3HvWM",
         "start": 155,
         "end": -1
-      },
-      {
-        "title": "10.1 Et Resurrexit (bar 188)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "MtYZzQ3HvWM",
-        "start": 155,
-        "end": 197
       },
       {
         "title": "10.1 Et Resurrexit (bar 188)",
@@ -1870,14 +1830,6 @@
         "videoId": "rv6_rFqa6Lk",
         "start": 155,
         "end": -1
-      },
-      {
-        "title": "10.1 Et Resurrexit (bar 188)",
-        "source": "youtube",
-        "ltr": true,
-        "videoId": "rv6_rFqa6Lk",
-        "start": 155,
-        "end": 197
       },
       {
         "title": "10.1 Et Resurrexit (bar 188)",
