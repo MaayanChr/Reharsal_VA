@@ -1,0 +1,150 @@
+{
+  "libraryTitle": "חג הלל 2026",
+  "defaultGroup": "all",
+  "segments": {
+    "sonprano1": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "q8FB3h4Ubms",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "soprano2": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "-_gkt5-Mupk",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "alto1": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "4PuR1c9lWeo",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "Tenor1": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "mnGQRtMo3AA",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "tenor2": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ybBJoPJrm_0",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "bass": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "ZdyiHHuRd14",
+        "start": 0,
+        "end": -1
+      }
+    ],
+    "all": [
+      {
+        "title": "Va Pensiero",
+        "source": "youtube",
+        "ltr": true,
+        "videoId": "akvFU_Ym8sI",
+        "start": 0,
+        "end": -1
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "soprano",
+      "label": "סופרן"
+    },
+    {
+      "id": "sonprano1",
+      "label": "סופרן 1"
+    },
+    {
+      "id": "soprano2",
+      "label": "סופרן 2"
+    },
+    {
+      "id": "alto",
+      "label": "אלט"
+    },
+    {
+      "id": "alto1",
+      "label": "אלט 1"
+    },
+    {
+      "id": "alto2",
+      "label": "אלט 2"
+    },
+    {
+      "id": "tenor",
+      "label": "טנור"
+    },
+    {
+      "id": "Tenor1",
+      "label": "טנור 1"
+    },
+    {
+      "id": "tenor2",
+      "label": "טנור 2"
+    },
+    {
+      "id": "bass",
+      "label": "בס"
+    },
+    {
+      "id": "Base1",
+      "label": "בס 1"
+    },
+    {
+      "id": "bass2",
+      "label": "בס 2"
+    },
+    {
+      "id": "solos",
+      "label": "סולנים"
+    },
+    {
+      "id": "SopSoli",
+      "label": "סופרן סולו"
+    },
+    {
+      "id": "AltSoli",
+      "label": "אלט סולו"
+    },
+    {
+      "id": "TenSoli",
+      "label": "טנור סולו"
+    },
+    {
+      "id": "BassSoli",
+      "label": "בס סולו"
+    },
+    {
+      "id": "all",
+      "label": "כולם"
+    }
+  ]
+}
